@@ -1,0 +1,88 @@
+$headerheight: 80px
+.indexpage
+  header
+    height: $headerheight
+    width: 100%
+    background: $c_theme_light
+    color: $c_theme_light
+  main
+    width: 100%
+    height: 100vh
+  .overview
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+  .half
+    width: 50%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    transition: all 0.5s ease-in-out
+    &:hover, &.open
+      width: 70%
+      p
+        opacity: 1
+      & + .half
+        width: 30%
+        background: $c_theme_accent
+      // & ~ .html
+      //   width: 30%
+      //   background: $c_theme_accent
+    &.open
+      .content
+        display: block
+      h1
+        font-size: 5rem
+      p
+        opacity: 0
+        font-size: 1rem
+      ul
+        list-style: none
+        color: $c_theme_dark
+        font-family: 'Inconsolata', monospace
+        font-weight: 600
+        font-size: 1.3rem
+        margin: 0
+        padding: 0
+        border-left: 1px solid $c_theme_light
+      li
+        margin: 0
+        padding: 0.5rem 1.3rem
+        line-height: 1
+        transition: all 0.5s ease-in-out
+        &:hover
+          background: $c_theme_light
+          cursor: pointer
+          // border-left: 6px solid $c_theme_light
+
+
+    p
+      font-size: 2rem
+      color: $c_theme_base
+      font-family: 'Inconsolata', monospace
+      margin: 1rem 0
+      opacity: 0
+      transition: all .5s ease-in-out
+      &:hover
+        color: $c_theme_light
+        cursor: pointer
+    h1
+      width: auto
+      text-align: center
+      font-size: 10rem
+      line-height: 1
+      margin: 0
+      padding: 0
+      color: $c_theme_light
+      transition: all .5s ease-in-out
+    .content
+      display: none
+      transition: all .5s ease-in-out
+  .html
+    background: $c_theme_bg_2
+  .css
+    background: $c_theme_dark
