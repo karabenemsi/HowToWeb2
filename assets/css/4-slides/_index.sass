@@ -1,13 +1,11 @@
 $headerheight: 80px
 .indexpage
-  header
-    height: $headerheight
-    width: 100%
-    background: $c_theme_light
-    color: $c_theme_light
   main
-    width: 100%
+    width: 100vw
     height: 100vh
+    margin: 0
+    overflow: hidden
+    max-width: auto
   .overview
     width: 100%
     height: 100%
@@ -17,65 +15,115 @@ $headerheight: 80px
   .half
     width: 50%
     height: 100%
-    display: flex
-    justify-content: center
-    align-items: center
+    // display: flex
+    // justify-content: center
+    // align-items: center
     flex-direction: column
     transition: all 0.5s ease-in-out
-    &:hover, &.open
+    &:hover
       width: 70%
       p
         opacity: 1
       & + .half
         width: 30%
-        background: $c_theme_accent
-      // & ~ .html
-      //   width: 30%
-      //   background: $c_theme_accent
+    &.closed
+      width: 30%
     &.open
+      width: 70% !important
       .content
         display: block
+        height: 70%
+        width: 40%
+        margin: 0 auto 0 35%
+        animation: index_listopen_content 0.5s forwards
       h1
         font-size: 5rem
+        margin: 2rem 0 0
       p
         opacity: 0
-        font-size: 1rem
+      .more
+        &::after, &::before
+          display: block
+          opacity: 0
+        &::after
+          animation: index_listopen_crossafter 0.8s 0.5s forwards
+          transform: rotate(45deg)
+        &::before
+          animation: index_listopen_crossbefore 0.8s 0.5s forwards
+          transform: rotate(-45deg)
       ul
         list-style: none
-        color: $c_theme_dark
         font-family: 'Inconsolata', monospace
         font-weight: 600
-        font-size: 1.3rem
+        font-size: 1.4rem
+        height: 100%
+        width: 100%
         margin: 0
         padding: 0
-        border-left: 1px solid $c_theme_light
+        display: flex
+        align-items: flex-start
+        justify-content: flex-start
+        flex-direction: column
+        flex-wrap: wrap
       li
+        border-left: 1px solid $c_theme_light
         margin: 0
-        padding: 0.5rem 1.3rem
+        padding: 0.5rem 0
         line-height: 1
+        min-width: 50%
+        width: 50%
+        opacity: 0
         transition: all 0.5s ease-in-out
+        animation: index_listopen_li 1.5s 0.5s forwards
         &:hover
           background: $c_theme_light
           cursor: pointer
-          // border-left: 6px solid $c_theme_light
-
+        a
+          padding: 0 1.3rem
+          display: block
+          opacity: 0
+          transform-origin: left center
+          animation: index_listopen_a 0.7s 2s forwards
+          color: inherit
 
     p
       font-size: 2rem
       color: $c_theme_base
       font-family: 'Inconsolata', monospace
-      margin: 1rem 0
+      margin: 1rem auto
+      padding: 0
+      width: auto
       opacity: 0
+      text-align: center
       transition: all .5s ease-in-out
+      position: relative
       &:hover
         color: $c_theme_light
         cursor: pointer
+    .more
+      position: relative
+      &::after, &::before
+        transition: all 0.5s
+        display: none
+        content: ' '
+        background: $c_theme_light
+        width: 2.282828rem
+        height: 0.1rem
+        position: absolute
+        left: 50%
+        top: 1.5rem
+        transform-origin: center center
+        &::after
+          transform: rotate(0)
+        &::before
+          transform: rotate(0)
+
     h1
       width: auto
       text-align: center
       font-size: 10rem
       line-height: 1
-      margin: 0
+      margin: calc(50vh - 5rem) 0 0 0
       padding: 0
       color: $c_theme_light
       transition: all .5s ease-in-out
@@ -84,5 +132,62 @@ $headerheight: 80px
       transition: all .5s ease-in-out
   .html
     background: $c_theme_bg_2
+    ul
+      color: $c_theme_dark
   .css
     background: $c_theme_dark
+    ul
+      color: $c_theme_bg_2
+
+
+
+@keyframes index_listopen_a
+  0%
+    opacity: 0
+    transform: scaleX(0)
+    padding: 0 0
+  5%
+    opacity: 1
+  100%
+    opacity: 1
+    padding: 0 1.3rem
+@keyframes index_listopen_li
+  0%
+    opacity: 0
+    height: 0
+  5%
+    opacity: 1
+  100%
+    opacity: 1
+    height: 1.4rem
+
+
+@keyframes index_listopen_content
+  0%
+    height: 0
+
+  100%
+    height: 70%
+
+@keyframes index_listopen_crossbefore
+  0%
+    opacity: 0
+    transform: translateX(-50%) rotate(0)
+    left: 55%
+  20%
+    opacity: 0.8
+  100%
+    left: 50%
+    opacity: 1
+    transform: translateX(-50%) rotate(-45deg)
+@keyframes index_listopen_crossafter
+    0%
+      opacity: 0
+      left: 45%
+      transform: translateX(-50%) rotate(0)
+    20%
+      opacity: 0.8
+    100%
+      left: 50%
+      opacity: 1
+      transform: translateX(-50%) rotate(45deg)

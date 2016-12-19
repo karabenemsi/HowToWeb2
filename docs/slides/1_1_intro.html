@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HowToWeb2.0</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+  </head>
+  <body>
+    <header>
+      <div class="homebox"><a href="../index.html">
+          <svg viewBox="0 0 24 24">
+            <path d="M9,19V13H11L13,13H15V19H18V10.91L12,4.91L6,10.91V19H9M12,2.09L21.91,12H20V21H13V15H11V21H4V12H2.09L12,2.09Z"></path>
+          </svg></a></div>
+      <div class="back"><a href="../index.html">
+          <svg viewBox="0 0 24 24">
+            <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+          </svg></a></div>
+      <h1>Einführung</h1>
+    </header>
+    <main>
+      <section class="explanation" id="1">
+        <h2>Erklärung</h2>
+        <div class="codebox">
+          <pre class="brush: xml">&lt;!DOCTYPE html&gt;
+  &lt;html lang="en"&gt;
+    &lt;head&gt;
+      &lt;meta charset="utf-8"&gt;
+      &lt;title&gt;HowToWeb2.0&lt;/title&gt;
+      &lt;link rel="stylesheet" type="text/css" href="../assets/css/main.css"&gt;
+    &lt;/head&gt;
+    </pre>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <span class="important">Wichtig</span>, quis nostrud exercitation ullamco <code class="bluelight">&lt;code&gt;Code&lt;/code&gt;</code> nisi ut aliquip ex ea commodo consequat. Duis aute irure <code class="red">!important</code> in reprehenderit in voluptate velit <code>BlaBlub</code> cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non <code class="green">'Funny String'</code>, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="nextslide"> </div>
+      </section>
+      <section class="code active" id="2">
+        <div class="previouslide"></div>
+        <div class="codeside">
+          <div class="htmltab">
+            <h3>index.html</h3>
+            <div class="codetab">
+              <pre class="brush: xml">&lt;section class="heroimage"&gt;&lt;/section&gt;
+&lt;header&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="logo"&gt;
+      &lt;h1&gt;JA&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;nav&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+&lt;main&gt;
+&lt;/main&gt;</pre>
+            </div>
+          </div>
+          <div class="csstab">
+            <h3>style.css</h3>
+            <div class="codetab">
+              <pre class="brush: css">header {
+  background: #18a9de;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 4rem;
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(60, 60, 60, 0.3);
+}
+
+header::after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+
+header .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header .logo {
+  padding: 0.5rem;
+  float: left;
+}
+</pre>
+            </div>
+          </div>
+        </div>
+        <div class="previewside preview">
+          <div class="section heroimage"></div>
+          <div class="header">
+            <div class="container">
+              <div class="logo">
+                <h1>JA</h1>
+              </div>
+              <nav>
+                <ul>
+                  <li><a>Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="main">
+            <div class="section">
+              <h1>Demobuild</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img src="../assets/img/big/img_b_040.jpg" alt="Stock">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <footer>
+    <p>KaraBeNemsi @ 2016</p>
+    <p>Build TB116u11</p>
+  </footer>
+  <script src="../assets/js/script.min.js" charset="utf-8"></script>
+  <script>
+    SyntaxHighlighter.defaults['gutter'] = true;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.defaults['ruler'] = false;
+    SyntaxHighlighter.defaults['html-style']= true;
+    SyntaxHighlighter.all();
+  </script>
+</html>

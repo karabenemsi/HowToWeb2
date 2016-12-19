@@ -1,0 +1,116 @@
+$contentwidth: 2000px
+header
+  height: 100%
+  width: 5rem
+  position: fixed
+  top: 0
+  left: 0
+  background: $c_theme_bg_2
+  padding: 0
+  margin: 0
+  h1
+    color: $c_theme_light
+    font-weight: 100
+    transform-origin: top left
+    transform: rotate(-90deg)
+    position: absolute
+    bottom: 2rem
+    left: 0
+    margin: 0
+    padding: 1rem
+    font-size: 3rem
+    line-height: 1
+  .homebox, .back
+    a
+      display: block
+      position: fixed
+      padding: 0
+      top: 0
+      width: 5rem
+      height: 5rem
+      margin: 0
+      svg
+        display: block
+        position: static
+        width: 40%
+        margin: 30%
+      path
+        transition: all 0.2s ease-in-out
+        fill: $c_theme_light
+      &:hover
+        path
+          fill: $c_theme_base
+  .back
+    a
+      top: 5rem
+
+footer
+  position: fixed
+  bottom: 0.5rem
+  right: 0.5rem
+  font-size: 0.7rem
+  text-transform: uppercase
+  text-align: right
+  color: $c_theme_base
+main
+  overflow: hidden
+  max-width: $contentwidth
+  height: 100vh
+  width: calc(100vw - 5rem)
+  margin: 0 auto 0 5rem
+.nextslide
+  z-index: 2000
+  position: absolute
+  bottom: 3rem
+  left: 35%
+  cursor: pointer
+  width: 30%
+  height: 3rem
+  &:hover
+    &::after, &::before
+      background: $c_theme_dark
+  &::after, &::before
+    content: ' '
+    position: absolute
+    left: 0
+    bottom: 3rem
+    background: $c_theme_light
+    top: 1rem
+    width: 3rem
+    height: 0.2rem
+    transition: all 0.5s ease-in-out
+    transform-origin: center center
+  &::after
+    left: calc(50% - 1rem)
+    transform: rotate(45deg)
+  &::before
+    left: calc(50% + 1rem)
+    transform: rotate(-45deg)
+.previouslide
+  z-index: 2000
+  position: absolute
+  top: 0
+  left: 35%
+  cursor: pointer
+  width: 30%
+  height: 3rem
+  &:hover
+    &::after, &::before
+      background: $c_theme_dark
+  &::after, &::before
+    content: ' '
+    position: absolute
+    left: 0
+    bottom: 3rem
+    background: $c_theme_light
+    top: 1.5rem
+    width: 3rem
+    height: 0.2rem
+    transition: all 0.5s ease-in-out
+    transform-origin: center center
+  &::after
+    left: calc(50% - 1rem)
+    transform: rotate(-45deg)
+  &::before
+    left: calc(50% + 1rem)
+    transform: rotate(45deg)

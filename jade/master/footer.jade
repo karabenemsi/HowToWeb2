@@ -1,8 +1,11 @@
 footer
-  .container
-    p
-    | &copy; 2016 |
-    i.fa.fa-github(aria-hidden='true') &nbsp;
-    a(href='#') View Source
+  p KaraBeNemsi @ #{(new Date()).getFullYear()}
+  p Build #{String.fromCharCode(65 + (new Date()).getDate())}B#{(new Date()).getYear()}#{String.fromCharCode(65 + (new Date()).getSeconds())}#{(new Date()).getMonth()}
     
-script(src="assets/js/script.min.js", charset="utf-8")
+script(src="../assets/js/script.min.js", charset="utf-8")
+script.
+  SyntaxHighlighter.defaults['gutter'] = true;
+  SyntaxHighlighter.defaults['toolbar'] = false;
+  SyntaxHighlighter.defaults['ruler'] = false;
+  SyntaxHighlighter.defaults['html-style']= true;
+  SyntaxHighlighter.all();

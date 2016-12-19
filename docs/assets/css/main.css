@@ -1,4 +1,828 @@
-@import url("https://fonts.googleapis.com/css?family=Inconsolata|Roboto:300,400,500,700");
+/**
+ * SyntaxHighlighter
+ * http://alexgorbatchev.com/SyntaxHighlighter
+ *
+ * SyntaxHighlighter is donationware. If you are using it, please donate.
+ * http://alexgorbatchev.com/SyntaxHighlighter/donate.html
+ *
+ * @version
+ * 3.0.83 (July 02 2010)
+ *
+ * @copyright
+ * Copyright (C) 2004-2010 Alex Gorbatchev.
+ *
+ * @license
+ * Dual licensed under the MIT and GPL licenses.
+ */
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Roboto:300,400,500,700|Roboto+Slab:300,400,500");
+.syntaxhighlighter a,
+.syntaxhighlighter div,
+.syntaxhighlighter code,
+.syntaxhighlighter table,
+.syntaxhighlighter table td,
+.syntaxhighlighter table tr,
+.syntaxhighlighter table tbody,
+.syntaxhighlighter table thead,
+.syntaxhighlighter table caption,
+.syntaxhighlighter textarea {
+  -moz-border-radius: 0 0 0 0 !important;
+  -webkit-border-radius: 0 0 0 0 !important;
+  background: none !important;
+  border: 0 !important;
+  bottom: auto !important;
+  float: none !important;
+  height: auto !important;
+  left: auto !important;
+  line-height: 1.1em !important;
+  margin: 0 !important;
+  outline: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: static !important;
+  right: auto !important;
+  text-align: left !important;
+  top: auto !important;
+  vertical-align: baseline !important;
+  width: auto !important;
+  box-sizing: content-box !important;
+  font-family: 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-size: 1em !important;
+  min-height: inherit !important;
+  min-height: auto !important;
+}
+
+.syntaxhighlighter {
+  width: 100% !important;
+  margin: 1em 0 1em 0 !important;
+  position: relative !important;
+  overflow: hidden !important;
+  font-size: 1em;
+}
+
+.syntaxhighlighter.source {
+  overflow: hidden !important;
+}
+
+.syntaxhighlighter .bold {
+  font-weight: bold !important;
+}
+
+.syntaxhighlighter .italic {
+  font-style: italic !important;
+}
+
+.syntaxhighlighter .line {
+  white-space: pre !important;
+}
+
+.syntaxhighlighter table {
+  width: 100% !important;
+}
+
+.syntaxhighlighter table caption {
+  text-align: left !important;
+  padding: .5em 0 0.5em 1em !important;
+}
+
+.syntaxhighlighter table td.code {
+  width: 100% !important;
+}
+
+.syntaxhighlighter table td.code .container {
+  position: relative !important;
+}
+
+.syntaxhighlighter table td.code .container textarea {
+  box-sizing: border-box !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  background: white !important;
+  padding-left: 1em !important;
+  overflow: hidden !important;
+  white-space: pre !important;
+}
+
+.syntaxhighlighter table td.gutter .line {
+  text-align: right !important;
+  padding: 0 0.5em 0 1em !important;
+}
+
+.syntaxhighlighter table td.code .line {
+  padding: 0 1em !important;
+}
+
+.syntaxhighlighter.nogutter td.code .container textarea, .syntaxhighlighter.nogutter td.code .line {
+  padding-left: 0em !important;
+}
+
+.syntaxhighlighter.show {
+  display: block !important;
+}
+
+.syntaxhighlighter.collapsed table {
+  display: none !important;
+}
+
+.syntaxhighlighter.collapsed .toolbar {
+  padding: 0.1em 0.8em 0em 0.8em !important;
+  font-size: 1em !important;
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.syntaxhighlighter.collapsed .toolbar span {
+  display: inline !important;
+  margin-right: 1em !important;
+}
+
+.syntaxhighlighter.collapsed .toolbar span a {
+  padding: 0 !important;
+  display: none !important;
+}
+
+.syntaxhighlighter.collapsed .toolbar span a.expandSource {
+  display: inline !important;
+}
+
+.syntaxhighlighter .toolbar {
+  position: absolute !important;
+  right: 1px !important;
+  top: 1px !important;
+  width: 11px !important;
+  height: 11px !important;
+  font-size: 10px !important;
+  z-index: 10 !important;
+}
+
+.syntaxhighlighter .toolbar span.title {
+  display: inline !important;
+}
+
+.syntaxhighlighter .toolbar a {
+  display: block !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  padding-top: 1px !important;
+}
+
+.syntaxhighlighter .toolbar a.expandSource {
+  display: none !important;
+}
+
+.syntaxhighlighter.ie {
+  font-size: .9em !important;
+  padding: 1px 0 1px 0 !important;
+}
+
+.syntaxhighlighter.ie .toolbar {
+  line-height: 8px !important;
+}
+
+.syntaxhighlighter.ie .toolbar a {
+  padding-top: 0px !important;
+}
+
+.syntaxhighlighter.printing .line.alt1 .content,
+.syntaxhighlighter.printing .line.alt2 .content,
+.syntaxhighlighter.printing .line.highlighted .number,
+.syntaxhighlighter.printing .line.highlighted.alt1 .content,
+.syntaxhighlighter.printing .line.highlighted.alt2 .content {
+  background: none !important;
+}
+
+.syntaxhighlighter.printing .line .number {
+  color: #bbbbbb !important;
+}
+
+.syntaxhighlighter.printing .line .content {
+  color: black !important;
+}
+
+.syntaxhighlighter.printing .toolbar {
+  display: none !important;
+}
+
+.syntaxhighlighter.printing a {
+  text-decoration: none !important;
+}
+
+.syntaxhighlighter.printing .plain, .syntaxhighlighter.printing .plain a {
+  color: black !important;
+}
+
+.syntaxhighlighter.printing .comments, .syntaxhighlighter.printing .comments a {
+  color: #008200 !important;
+}
+
+.syntaxhighlighter.printing .string, .syntaxhighlighter.printing .string a {
+  color: blue !important;
+}
+
+.syntaxhighlighter.printing .keyword {
+  color: #006699 !important;
+  font-weight: bold !important;
+}
+
+.syntaxhighlighter.printing .preprocessor {
+  color: gray !important;
+}
+
+.syntaxhighlighter.printing .variable {
+  color: #aa7700 !important;
+}
+
+.syntaxhighlighter.printing .value {
+  color: #009900 !important;
+}
+
+.syntaxhighlighter.printing .functions {
+  color: #ff1493 !important;
+}
+
+.syntaxhighlighter.printing .constants {
+  color: #0066cc !important;
+}
+
+.syntaxhighlighter.printing .script {
+  font-weight: bold !important;
+}
+
+.syntaxhighlighter.printing .color1, .syntaxhighlighter.printing .color1 a {
+  color: gray !important;
+}
+
+.syntaxhighlighter.printing .color2, .syntaxhighlighter.printing .color2 a {
+  color: #ff1493 !important;
+}
+
+.syntaxhighlighter.printing .color3, .syntaxhighlighter.printing .color3 a {
+  color: red !important;
+}
+
+.syntaxhighlighter.printing .break, .syntaxhighlighter.printing .break a {
+  color: black !important;
+}
+
+/**
+ * SyntaxHighlighter
+ * http://alexgorbatchev.com/SyntaxHighlighter
+ *
+ * SyntaxHighlighter is donationware. If you are using it, please donate.
+ * http://alexgorbatchev.com/SyntaxHighlighter/donate.html
+ *
+ * @version
+ * 3.0.83 (July 02 2010)
+ *
+ * @copyright
+ * Copyright (C) 2004-2010 Alex Gorbatchev.
+ *
+ * @license
+ * Dual licensed under the MIT and GPL licenses.
+ */
+.syntaxhighlighter a,
+.syntaxhighlighter div,
+.syntaxhighlighter code,
+.syntaxhighlighter table,
+.syntaxhighlighter table td,
+.syntaxhighlighter table tr,
+.syntaxhighlighter table tbody,
+.syntaxhighlighter table thead,
+.syntaxhighlighter table caption,
+.syntaxhighlighter textarea {
+  -moz-border-radius: 0 0 0 0 !important;
+  -webkit-border-radius: 0 0 0 0 !important;
+  background: none !important;
+  border: 0 !important;
+  bottom: auto !important;
+  float: none !important;
+  height: auto !important;
+  left: auto !important;
+  line-height: 1.3em !important;
+  margin: 0 !important;
+  outline: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: static !important;
+  right: auto !important;
+  text-align: left !important;
+  top: auto !important;
+  vertical-align: baseline !important;
+  width: auto !important;
+  box-sizing: content-box !important;
+  font-family: 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-size: 1em;
+  min-height: inherit !important;
+  min-height: auto !important;
+}
+
+.syntaxhighlighter {
+  width: 100% !important;
+  margin: 1em 0 1em 0 !important;
+  position: relative !important;
+  overflow: auto !important;
+  font-size: 1em;
+}
+
+.syntaxhighlighter.source {
+  overflow: hidden !important;
+}
+
+.syntaxhighlighter .bold {
+  font-weight: bold !important;
+}
+
+.syntaxhighlighter .italic {
+  font-style: italic !important;
+}
+
+.syntaxhighlighter .line {
+  white-space: pre !important;
+}
+
+.syntaxhighlighter table {
+  width: 100% !important;
+}
+
+.syntaxhighlighter table caption {
+  text-align: left !important;
+  padding: .5em 0 0.5em 1em !important;
+}
+
+.syntaxhighlighter table td.code {
+  width: 100% !important;
+}
+
+.syntaxhighlighter table td.code .container {
+  position: relative !important;
+}
+
+.syntaxhighlighter table td.code .container textarea {
+  box-sizing: border-box !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  background: white !important;
+  padding-left: 1em !important;
+  overflow: hidden !important;
+  white-space: pre !important;
+}
+
+.syntaxhighlighter table td.gutter .line {
+  text-align: right !important;
+  padding: 0 0.5em 0 1em !important;
+}
+
+.syntaxhighlighter table td.code .line {
+  padding: 0 1em !important;
+}
+
+.syntaxhighlighter.nogutter td.code .container textarea, .syntaxhighlighter.nogutter td.code .line {
+  padding-left: 0em !important;
+}
+
+.syntaxhighlighter.show {
+  display: block !important;
+}
+
+.syntaxhighlighter.collapsed table {
+  display: none !important;
+}
+
+.syntaxhighlighter.collapsed .toolbar {
+  padding: 0.1em 0.8em 0em 0.8em !important;
+  font-size: 1em !important;
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.syntaxhighlighter.collapsed .toolbar span {
+  display: inline !important;
+  margin-right: 1em !important;
+}
+
+.syntaxhighlighter.collapsed .toolbar span a {
+  padding: 0 !important;
+  display: none !important;
+}
+
+.syntaxhighlighter.collapsed .toolbar span a.expandSource {
+  display: inline !important;
+}
+
+.syntaxhighlighter .toolbar {
+  position: absolute !important;
+  right: 1px !important;
+  top: 1px !important;
+  width: 11px !important;
+  height: 11px !important;
+  font-size: 10px !important;
+  z-index: 10 !important;
+}
+
+.syntaxhighlighter .toolbar span.title {
+  display: inline !important;
+}
+
+.syntaxhighlighter .toolbar a {
+  display: block !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  padding-top: 1px !important;
+}
+
+.syntaxhighlighter .toolbar a.expandSource {
+  display: none !important;
+}
+
+.syntaxhighlighter.ie {
+  font-size: .9em !important;
+  padding: 1px 0 1px 0 !important;
+}
+
+.syntaxhighlighter.ie .toolbar {
+  line-height: 8px !important;
+}
+
+.syntaxhighlighter.ie .toolbar a {
+  padding-top: 0px !important;
+}
+
+.syntaxhighlighter.printing .line.alt1 .content,
+.syntaxhighlighter.printing .line.alt2 .content,
+.syntaxhighlighter.printing .line.highlighted .number,
+.syntaxhighlighter.printing .line.highlighted.alt1 .content,
+.syntaxhighlighter.printing .line.highlighted.alt2 .content {
+  background: none !important;
+}
+
+.syntaxhighlighter.printing .line .number {
+  color: #bbbbbb !important;
+}
+
+.syntaxhighlighter.printing .line .content {
+  color: black !important;
+}
+
+.syntaxhighlighter.printing .toolbar {
+  display: none !important;
+}
+
+.syntaxhighlighter.printing a {
+  text-decoration: none !important;
+}
+
+.syntaxhighlighter.printing .plain, .syntaxhighlighter.printing .plain a {
+  color: black !important;
+}
+
+.syntaxhighlighter.printing .comments, .syntaxhighlighter.printing .comments a {
+  color: #008200 !important;
+}
+
+.syntaxhighlighter.printing .string, .syntaxhighlighter.printing .string a {
+  color: blue !important;
+}
+
+.syntaxhighlighter.printing .keyword {
+  color: #006699 !important;
+  font-weight: bold !important;
+}
+
+.syntaxhighlighter.printing .preprocessor {
+  color: gray !important;
+}
+
+.syntaxhighlighter.printing .variable {
+  color: #aa7700 !important;
+}
+
+.syntaxhighlighter.printing .value {
+  color: #009900 !important;
+}
+
+.syntaxhighlighter.printing .functions {
+  color: #ff1493 !important;
+}
+
+.syntaxhighlighter.printing .constants {
+  color: #0066cc !important;
+}
+
+.syntaxhighlighter.printing .script {
+  font-weight: bold !important;
+}
+
+.syntaxhighlighter.printing .color1, .syntaxhighlighter.printing .color1 a {
+  color: gray !important;
+}
+
+.syntaxhighlighter.printing .color2, .syntaxhighlighter.printing .color2 a {
+  color: #ff1493 !important;
+}
+
+.syntaxhighlighter.printing .color3, .syntaxhighlighter.printing .color3 a {
+  color: red !important;
+}
+
+.syntaxhighlighter.printing .break, .syntaxhighlighter.printing .break a {
+  color: black !important;
+}
+
+.syntaxhighlighter {
+  background-color: white !important;
+}
+
+.syntaxhighlighter .line.alt1 {
+  background-color: white !important;
+}
+
+.syntaxhighlighter .line.alt2 {
+  background-color: white !important;
+}
+
+.syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 {
+  background-color: #e0e0e0 !important;
+}
+
+.syntaxhighlighter .line.highlighted.number {
+  color: black !important;
+}
+
+.syntaxhighlighter table caption {
+  color: black !important;
+}
+
+.syntaxhighlighter .gutter {
+  color: #afafaf !important;
+}
+
+.syntaxhighlighter .gutter .line {
+  border-right: 3px solid #6ce26c !important;
+}
+
+.syntaxhighlighter .gutter .line.highlighted {
+  background-color: #6ce26c !important;
+  color: white !important;
+}
+
+.syntaxhighlighter.printing .line .content {
+  border: none !important;
+}
+
+.syntaxhighlighter.collapsed {
+  overflow: hidden !important;
+}
+
+.syntaxhighlighter.collapsed .toolbar {
+  color: blue !important;
+  background: white !important;
+  border: 1px solid #6ce26c !important;
+}
+
+.syntaxhighlighter.collapsed .toolbar a {
+  color: blue !important;
+}
+
+.syntaxhighlighter.collapsed .toolbar a:hover {
+  color: red !important;
+}
+
+.syntaxhighlighter .toolbar {
+  color: white !important;
+  background: #6ce26c !important;
+  border: none !important;
+}
+
+.syntaxhighlighter .toolbar a {
+  color: white !important;
+}
+
+.syntaxhighlighter .toolbar a:hover {
+  color: black !important;
+}
+
+.syntaxhighlighter .plain, .syntaxhighlighter .plain a {
+  color: black !important;
+}
+
+.syntaxhighlighter .comments, .syntaxhighlighter .comments a {
+  color: #008200 !important;
+}
+
+.syntaxhighlighter .string, .syntaxhighlighter .string a {
+  color: blue !important;
+}
+
+.syntaxhighlighter .keyword {
+  color: #006699 !important;
+}
+
+.syntaxhighlighter .preprocessor {
+  color: gray !important;
+}
+
+.syntaxhighlighter .variable {
+  color: #aa7700 !important;
+}
+
+.syntaxhighlighter .value {
+  color: #009900 !important;
+}
+
+.syntaxhighlighter .functions {
+  color: #ff1493 !important;
+}
+
+.syntaxhighlighter .constants {
+  color: #0066cc !important;
+}
+
+.syntaxhighlighter .script {
+  font-weight: bold !important;
+  color: #006699 !important;
+  background-color: none !important;
+}
+
+.syntaxhighlighter .color1, .syntaxhighlighter .color1 a {
+  color: gray !important;
+}
+
+.syntaxhighlighter .color2, .syntaxhighlighter .color2 a {
+  color: #ff1493 !important;
+}
+
+.syntaxhighlighter .color3, .syntaxhighlighter .color3 a {
+  color: red !important;
+}
+
+.syntaxhighlighter .keyword {
+  font-weight: bold !important;
+}
+
+/**
+ * SyntaxHighlighter
+ * http://alexgorbatchev.com/SyntaxHighlighter
+ *
+ * SyntaxHighlighter is donationware. If you are using it, please donate.
+ * http://alexgorbatchev.com/SyntaxHighlighter/donate.html
+ *
+ * @version
+ * 3.0.83 (July 02 2010)
+ *
+ * @copyright
+ * Copyright (C) 2004-2010 Alex Gorbatchev.
+ *
+ * @license
+ * Dual licensed under the MIT and GPL licenses.
+ */
+.syntaxhighlighter {
+  background-color: #282C34 !important;
+}
+
+.syntaxhighlighter .line.alt1 {
+  background-color: #282C34 !important;
+}
+
+.syntaxhighlighter .line.alt2 {
+  background-color: #282C34 !important;
+}
+
+.syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 {
+  background-color: #e0e0e0 !important;
+}
+
+.syntaxhighlighter .line.highlighted.number {
+  color: black !important;
+}
+
+.syntaxhighlighter table caption {
+  color: black !important;
+}
+
+.syntaxhighlighter .gutter {
+  color: #ABB2BF !important;
+}
+
+.syntaxhighlighter .gutter .line {
+  border-right: 3px solid #4B5262 !important;
+}
+
+.syntaxhighlighter .gutter .line.highlighted {
+  background-color: #6ce26c !important;
+  color: white !important;
+}
+
+.syntaxhighlighter.printing .line .content {
+  border: none !important;
+}
+
+.syntaxhighlighter.collapsed {
+  overflow: visible !important;
+}
+
+.syntaxhighlighter.collapsed .toolbar {
+  color: blue !important;
+  background: white !important;
+  border: 1px solid #6ce26c !important;
+}
+
+.syntaxhighlighter.collapsed .toolbar a {
+  color: blue !important;
+}
+
+.syntaxhighlighter.collapsed .toolbar a:hover {
+  color: red !important;
+}
+
+.syntaxhighlighter .toolbar {
+  color: white !important;
+  background: #6ce26c !important;
+  border: none !important;
+}
+
+.syntaxhighlighter .toolbar a {
+  color: white !important;
+}
+
+.syntaxhighlighter .toolbar a:hover {
+  color: black !important;
+}
+
+.syntaxhighlighter .plain, .syntaxhighlighter .plain a {
+  color: #abb2bf !important;
+}
+
+.syntaxhighlighter .comments, .syntaxhighlighter .comments a {
+  color: #828997 !important;
+}
+
+.syntaxhighlighter .string, .syntaxhighlighter .string a {
+  color: #98c379 !important;
+}
+
+.syntaxhighlighter .keyword {
+  color: #e06c75 !important;
+}
+
+.syntaxhighlighter .preprocessor {
+  color: #d19a66 !important;
+}
+
+.syntaxhighlighter .variable {
+  color: #e06c75 !important;
+}
+
+.syntaxhighlighter .value {
+  color: #d19a66 !important;
+}
+
+.syntaxhighlighter .functions {
+  color: #56b6c2 !important;
+}
+
+.syntaxhighlighter .constants {
+  color: #0066cc !important;
+}
+
+.syntaxhighlighter .script {
+  font-weight: 600 !important;
+  color: #006699 !important;
+  background-color: none !important;
+}
+
+.syntaxhighlighter .color1, .syntaxhighlighter .color1 a {
+  color: #d19a66 !important;
+}
+
+.syntaxhighlighter .color2, .syntaxhighlighter .color2 a {
+  color: #ff1493 !important;
+}
+
+.syntaxhighlighter .color3, .syntaxhighlighter .color3 a {
+  color: #c678dd !important;
+}
+
+.syntaxhighlighter .plain, .syntaxhighlighter .plain a {
+  color: #abb2bf !important;
+}
+
+.syntaxhighlighter .keyword {
+  font-weight: 300 !important;
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -310,7 +1134,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .large, h2 {
-  font-size: 42px;
+  color: #000;
+  font-size: 4rem;
+  font-weight: 300;
+  margin: 0 0 3rem;
+  padding: 0;
   line-height: 1.14;
 }
 
@@ -327,6 +1155,14 @@ h1, h2, h3, h4, h5, h6 {
 .small, small {
   font-size: 10px;
   line-height: 1.2;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
 }
 
 p {
@@ -349,16 +1185,308 @@ hr {
   height: 0;
 }
 
-.indexpage header {
-  height: 80px;
-  width: 100%;
-  background: #95DEE2;
+::-webkit-scrollbar {
+  width: 0.3rem;
+  background: #4B5262;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4B5262;
+}
+
+::-webkit-scrollbar-corner {
+  background: #4B5262;
+}
+
+header {
+  height: 100%;
+  width: 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #578CA9;
+  padding: 0;
+  margin: 0;
+}
+
+header h1 {
   color: #95DEE2;
+  font-weight: 100;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  margin: 0;
+  padding: 1rem;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+header .homebox a, header .back a {
+  display: block;
+  position: fixed;
+  padding: 0;
+  top: 0;
+  width: 5rem;
+  height: 5rem;
+  margin: 0;
+}
+
+header .homebox a svg, header .back a svg {
+  display: block;
+  position: static;
+  width: 40%;
+  margin: 30%;
+}
+
+header .homebox a path, header .back a path {
+  transition: all 0.2s ease-in-out;
+  fill: #95DEE2;
+}
+
+header .homebox a:hover path, header .back a:hover path {
+  fill: #2D5593;
+}
+
+header .back a {
+  top: 5rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  text-align: right;
+  color: #2D5593;
+}
+
+main {
+  overflow: hidden;
+  max-width: 2000px;
+  height: 100vh;
+  width: calc(100vw - 5rem);
+  margin: 0 auto 0 5rem;
+}
+
+.nextslide {
+  z-index: 2000;
+  position: absolute;
+  bottom: 3rem;
+  left: 35%;
+  cursor: pointer;
+  width: 30%;
+  height: 3rem;
+}
+
+.nextslide:hover::after, .nextslide:hover::before {
+  background: #142642;
+}
+
+.nextslide::after, .nextslide::before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  bottom: 3rem;
+  background: #95DEE2;
+  top: 1rem;
+  width: 3rem;
+  height: 0.2rem;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+}
+
+.nextslide::after {
+  left: calc(50% - 1rem);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.nextslide::before {
+  left: calc(50% + 1rem);
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.previouslide {
+  z-index: 2000;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  cursor: pointer;
+  width: 30%;
+  height: 3rem;
+}
+
+.previouslide:hover::after, .previouslide:hover::before {
+  background: #142642;
+}
+
+.previouslide::after, .previouslide::before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  bottom: 3rem;
+  background: #95DEE2;
+  top: 1.5rem;
+  width: 3rem;
+  height: 0.2rem;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+}
+
+.previouslide::after {
+  left: calc(50% - 1rem);
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.previouslide::before {
+  left: calc(50% + 1rem);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+section {
+  transition: all 0.5s ease-in-out;
+  position: fixed;
+  top: calc(-100% - 3rem);
+  height: 100%;
+  width: calc(100% - 15rem);
+  padding: 3rem 5rem 0;
+  overflow: hidden;
+}
+
+section.active {
+  top: 0;
+}
+
+.explanation .codebox {
+  background: #282c34;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 2rem;
+  margin: 0 auto;
+  border-radius: 0;
+}
+
+.explanation p {
+  margin: 1rem 0 0 0;
+  font-size: 2rem;
+  margin: 2rem auto;
+  text-align: justify;
+}
+
+.explanation p .important {
+  color: #FF5B4A;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 0.8;
+}
+
+.explanation p code {
+  background: #282c34;
+  color: #abb2bf;
+  display: inline-block;
+  padding: 0 0.5rem;
+}
+
+.explanation p code.red {
+  color: #e06c75;
+}
+
+.explanation p code.orange {
+  color: #d19a66;
+}
+
+.explanation p code.bluelight {
+  color: #56b6c2;
+}
+
+.explanation p code.bluedark {
+  color: #006699;
+}
+
+.explanation p code.green {
+  color: #98c379;
+}
+
+.explanation p code.purple {
+  color: #c678dd;
+}
+
+.explanation p code.pink {
+  color: #ff1493;
+}
+
+section.code {
+  padding: 0;
+  width: calc(100% - 5rem);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+section.code .codeside {
+  background: #282c34;
+  width: 50%;
+  overflow-y: scroll;
+}
+
+section.code .codeside h3 {
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.3rem;
+  color: #abb2bf;
+  font-weight: 300;
+  margin: 0;
+  padding: 1rem;
+}
+
+section.code .codeside pre {
+  font-size: 1.4rem;
+}
+
+section.code .codeside .csstab {
+  padding: 1rem 0 0 1rem;
+  border-top: 0.3rem solid #4B5262;
+}
+
+section.code .codeside .htmltab {
+  padding: 1rem 0 0 1rem;
+}
+
+section.code .previewside {
+  background: #fff;
+  width: 50%;
+  overflow-y: scroll;
 }
 
 .indexpage main {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  max-width: auto;
 }
 
 .indexpage .overview {
@@ -378,63 +1506,108 @@ hr {
 .indexpage .half {
   width: 50%;
   height: 100%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   transition: all 0.5s ease-in-out;
 }
 
-.indexpage .half:hover, .indexpage .half.open {
+.indexpage .half:hover {
   width: 70%;
 }
 
-.indexpage .half:hover p, .indexpage .half.open p {
+.indexpage .half:hover p {
   opacity: 1;
 }
 
-.indexpage .half:hover + .half, .indexpage .half.open + .half {
+.indexpage .half:hover + .half {
   width: 30%;
-  background: #FFC800;
+}
+
+.indexpage .half.closed {
+  width: 30%;
+}
+
+.indexpage .half.open {
+  width: 70% !important;
 }
 
 .indexpage .half.open .content {
   display: block;
+  height: 70%;
+  width: 40%;
+  margin: 0 auto 0 35%;
+  -webkit-animation: index_listopen_content 0.5s forwards;
+  animation: index_listopen_content 0.5s forwards;
 }
 
 .indexpage .half.open h1 {
   font-size: 5rem;
+  margin: 2rem 0 0;
 }
 
 .indexpage .half.open p {
   opacity: 0;
-  font-size: 1rem;
+}
+
+.indexpage .half.open .more::after, .indexpage .half.open .more::before {
+  display: block;
+  opacity: 0;
+}
+
+.indexpage .half.open .more::after {
+  -webkit-animation: index_listopen_crossafter 0.8s 0.5s forwards;
+  animation: index_listopen_crossafter 0.8s 0.5s forwards;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.indexpage .half.open .more::before {
+  -webkit-animation: index_listopen_crossbefore 0.8s 0.5s forwards;
+  animation: index_listopen_crossbefore 0.8s 0.5s forwards;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .indexpage .half.open ul {
   list-style: none;
-  color: #142642;
   font-family: 'Inconsolata', monospace;
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
-  border-left: 1px solid #95DEE2;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .indexpage .half.open li {
+  border-left: 1px solid #95DEE2;
   margin: 0;
-  padding: 0.5rem 1.3rem;
+  padding: 0.5rem 0;
   line-height: 1;
+  min-width: 50%;
+  width: 50%;
+  opacity: 0;
   transition: all 0.5s ease-in-out;
+  -webkit-animation: index_listopen_li 1.5s 0.5s forwards;
+  animation: index_listopen_li 1.5s 0.5s forwards;
 }
 
 .indexpage .half.open li:hover {
@@ -442,13 +1615,29 @@ hr {
   cursor: pointer;
 }
 
+.indexpage .half.open li a {
+  padding: 0 1.3rem;
+  display: block;
+  opacity: 0;
+  -webkit-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-animation: index_listopen_a 0.7s 2s forwards;
+  animation: index_listopen_a 0.7s 2s forwards;
+  color: inherit;
+}
+
 .indexpage .half p {
   font-size: 2rem;
   color: #2D5593;
   font-family: 'Inconsolata', monospace;
-  margin: 1rem 0;
+  margin: 1rem auto;
+  padding: 0;
+  width: auto;
   opacity: 0;
+  text-align: center;
   transition: all .5s ease-in-out;
+  position: relative;
 }
 
 .indexpage .half p:hover {
@@ -456,12 +1645,43 @@ hr {
   cursor: pointer;
 }
 
+.indexpage .half .more {
+  position: relative;
+}
+
+.indexpage .half .more::after, .indexpage .half .more::before {
+  transition: all 0.5s;
+  display: none;
+  content: ' ';
+  background: #95DEE2;
+  width: 2.282828rem;
+  height: 0.1rem;
+  position: absolute;
+  left: 50%;
+  top: 1.5rem;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+}
+
+.indexpage .half .more::after::after, .indexpage .half .more::before::after {
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+}
+
+.indexpage .half .more::after::before, .indexpage .half .more::before::before {
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+}
+
 .indexpage .half h1 {
   width: auto;
   text-align: center;
   font-size: 10rem;
   line-height: 1;
-  margin: 0;
+  margin: calc(50vh - 5rem) 0 0 0;
   padding: 0;
   color: #95DEE2;
   transition: all .5s ease-in-out;
@@ -476,6 +1696,289 @@ hr {
   background: #578CA9;
 }
 
+.indexpage .html ul {
+  color: #142642;
+}
+
 .indexpage .css {
   background: #142642;
+}
+
+.indexpage .css ul {
+  color: #578CA9;
+}
+
+@-webkit-keyframes index_listopen_a {
+  0% {
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    padding: 0 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    padding: 0 1.3rem;
+  }
+}
+
+@keyframes index_listopen_a {
+  0% {
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    padding: 0 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    padding: 0 1.3rem;
+  }
+}
+
+@-webkit-keyframes index_listopen_li {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    height: 1.4rem;
+  }
+}
+
+@keyframes index_listopen_li {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    height: 1.4rem;
+  }
+}
+
+@-webkit-keyframes index_listopen_content {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 70%;
+  }
+}
+
+@keyframes index_listopen_content {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 70%;
+  }
+}
+
+@-webkit-keyframes index_listopen_crossbefore {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-50%) rotate(0);
+    transform: translateX(-50%) rotate(0);
+    left: 55%;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    left: 50%;
+    opacity: 1;
+    -webkit-transform: translateX(-50%) rotate(-45deg);
+    transform: translateX(-50%) rotate(-45deg);
+  }
+}
+
+@keyframes index_listopen_crossbefore {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-50%) rotate(0);
+    transform: translateX(-50%) rotate(0);
+    left: 55%;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    left: 50%;
+    opacity: 1;
+    -webkit-transform: translateX(-50%) rotate(-45deg);
+    transform: translateX(-50%) rotate(-45deg);
+  }
+}
+
+@-webkit-keyframes index_listopen_crossafter {
+  0% {
+    opacity: 0;
+    left: 45%;
+    -webkit-transform: translateX(-50%) rotate(0);
+    transform: translateX(-50%) rotate(0);
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    left: 50%;
+    opacity: 1;
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+  }
+}
+
+@keyframes index_listopen_crossafter {
+  0% {
+    opacity: 0;
+    left: 45%;
+    -webkit-transform: translateX(-50%) rotate(0);
+    transform: translateX(-50%) rotate(0);
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    left: 50%;
+    opacity: 1;
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+  }
+}
+
+.preview {
+  position: relative;
+  font-size: 15px;
+}
+
+.preview .header {
+  background: #18a9de;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 4em;
+  box-shadow: 0 0.25em 0.5em 0 rgba(60, 60, 60, 0.3);
+}
+
+.preview .header::after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+
+.preview .header .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.preview .header .logo {
+  padding: 0.5rem;
+  float: left;
+}
+
+.preview .header .logo h1 {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+  color: #c2e7f3;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: -5px;
+  line-height: 1;
+  font-family: 'Roboto Slab', serif;
+}
+
+.preview .header .logo h1::first-letter {
+  font-weight: 600;
+}
+
+.preview .header .logo img {
+  height: 3rem;
+  width: 3rem;
+}
+
+.preview .header nav {
+  float: right;
+}
+
+.preview .header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.preview .header nav li {
+  float: left;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.preview .header nav li a {
+  display: block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1;
+  padding: 1.5rem 1.3rem;
+  margin: 0;
+  color: #c2e7f3;
+  transition: all 0.5s ease-in-out;
+}
+
+.preview .header nav li a:hover {
+  color: #fff;
+  background: #1C72A3;
+  cursor: pointer;
+}
+
+.preview .heroimage {
+  width: 100%;
+  height: 20rem;
+  background-image: url(../assets/img/big/img_b_018.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.preview .main {
+  padding: 4rem 1rem 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #0f0634;
+}
+
+.preview .main p {
+  line-height: 2;
+  font-size: 1.2rem;
+}
+
+.preview .main h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0 0 2rem;
+  padding: 0 0 0 1rem;
+  line-height: 1;
+  border-left: 2px solid #0f0634;
+}
+
+.preview .main .section {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.preview .main img {
+  width: 100%;
+  margin: 2rem 0;
 }
