@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="utf-8">
     <title>HowToWeb2.0</title>
@@ -15,23 +15,34 @@
           <svg viewBox="0 0 24 24">
             <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
           </svg></a></div>
+      <div class="forward"><a href="1_3_elements.html">
+          <svg viewBox="0 0 24 24" style="transform: rotate(180deg)">
+            <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+          </svg></a></div>
       <h1>Basics</h1>
     </header>
     <main>
-      <section class="explanation active" id="1">
+      <section class="explanation" id="1">
         <h2>Was ist HTML?</h2>
+        <div class="center xlgpad xlgfont"><strong>H</strong>yper<strong>T</strong>ext - <strong>M</strong>arkup - <strong>L</strong>anguage</div>
+        <p class="center lgfont">Hypertext Auszeichungssprache</p>
+        <p>Aktuelle Version: HTML 5</p>
         <div class="nextslide"></div>
       </section>
       <section class="explanation" id="2">
         <div class="previouslide"></div>
         <h2>Eine einfache HTML-Seite</h2>
-        <div class="codebox">
+        <div class="codebox lgfont">
           <pre class="brush: xml">&lt;!DOCTYPE html&gt;
   &lt;html lang="en"&gt;
     &lt;head&gt;
       &lt;meta charset="utf-8"&gt;
       &lt;title&gt;HowToWeb2.0&lt;/title&gt;
     &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h1&gt;Überschrif&lt;/h1&gt;
+      &lt;p&gt;Abschnitt&lt;/&gt;
+    &lt;/body&gt;
     </pre>
         </div>
         <div class="nextslide"></div>
@@ -39,6 +50,13 @@
       <section class="explanation" id="3">
         <div class="previouslide"></div>
         <h2>HTML Tags</h2>
+        <p>HTML-Elemente werden durch<span class="imprtant">Tags</span>gekennzeichnet:
+          <div class="codebox lgfont">
+            <pre class="brush: xml">&lt;tagname&gt;Content&lt;/tagname&gt;</pre>
+          </div>
+        </p>
+        <p>Der Inhalt eines Elements wird eingerahmt von einem Starttag: <code class="red">&lt;tag&gt;</code>Und einem Endtag: <code class="red">&lt;/tag&gt;</code></p>
+        <p>Das Endtag (Auch: "opening tag") besitz im Gegensatz zum Starttag (Auch "closing tag") einen Schrägstrich <code class="red">/</code> (engl.: "slash" oder "forward slash")</p>
         <div class="nextslide"> </div>
       </section>
       <section class="code" id="4">
@@ -48,17 +66,46 @@
           <div class="hmtltab">
             <h3>index.html</h3>
             <div class="codetab">
-              <pre class="brush: xml"></pre>
+              <pre class="brush: xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;title&gt;HowToWeb2.0&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  <h1> Überschrift </h1>
+  <p>Absatz Nummmer eins</p>
+  <p>Und noch ein Absatz</p>
+ &lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
             </div>
           </div>
         </div>
-        <div class="previewside preview"></div>
+        <div class="previewside preview">
+          <div class="prettydiv">
+            <h1>Überschrift</h1>
+            <p>Absatz Nummer eins</p>
+            <p>Und noch ein Absatz</p>
+          </div>
+        </div>
+        <div class="nextslide"> </div>
+      </section>
+      <section class="explanation active" id="5">
+        <div class="previouslide"></div>
+        <h2>SelfHTML</h2>
+        <div class="fourimages">  
+          <div class="quarter">      <img src="../assets/img/slides/basics/001.jpg"></div>
+          <div class="quarter">      <img src="../assets/img/slides/basics/002.jpg"></div>
+          <div class="quarter">      <img src="../assets/img/slides/basics/003.jpg"></div>
+          <div class="quarter">      <img src="../assets/img/slides/basics/004.jpg"></div>
+        </div>
       </section>
     </main>
   </body>
   <footer>
     <p>KaraBeNemsi @ 2016</p>
-    <p>Build WB116Z11</p>
+    <p>Build WB116c11</p>
   </footer>
   <script src="../assets/js/script.min.js" charset="utf-8"></script>
   <script>

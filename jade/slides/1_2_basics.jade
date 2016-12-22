@@ -3,29 +3,37 @@
 -var current = "1_2_basics.html"
 -var next = "1_3_elements.html"
 -var previous = "1_1_intro.html"
+-var title = "Basics"
 doctype html
-html(lang='en')
+html(lang='de')
   include ../master/head.jade
   body
-    header
-      .homebox
-        a(href=home)
-          svg(viewBox="0 0 24 24")
-            path(d="M9,19V13H11L13,13H15V19H18V10.91L12,4.91L6,10.91V19H9M12,2.09L21.91,12H20V21H13V15H11V21H4V12H2.09L12,2.09Z")
-      .back
-        a(href=previous)
-          svg(viewBox="0 0 24 24")
-            path(d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z")
-      h1 Basics
+    include ../master/header.jade
     main
-      section#1.explanation.active
+      section#1.explanation
         h2 Was ist HTML?
+
+        .center.xlgpad.xlgfont
+          strong H
+          | yper
+          strong T
+          | ext - 
+          strong M
+          | arkup - 
+          strong L
+          |anguage
+        
+        p.center.lgfont Hypertext Auszeichungssprache
+        
+        p Aktuelle Version: HTML 5
+        
+        
 
         .nextslide
       section#2.explanation
         .previouslide
         h2 Eine einfache HTML-Seite
-        .codebox
+        .codebox.lgfont
           pre(class="brush: xml").
             &lt;!DOCTYPE html&gt;
               &lt;html lang="en"&gt;
@@ -33,13 +41,29 @@ html(lang='en')
                   &lt;meta charset="utf-8"&gt;
                   &lt;title&gt;HowToWeb2.0&lt;/title&gt;
                 &lt;/head&gt;
+                &lt;body&gt;
+                  &lt;h1&gt;Überschrif&lt;/h1&gt;
+                  &lt;p&gt;Abschnitt&lt;/&gt;
+                &lt;/body&gt;
                 
         .nextslide
       section#3.explanation
         .previouslide
         h2 HTML Tags
-        
-        
+        p HTML-Elemente werden durch
+          span.imprtant Tags
+          | gekennzeichnet:
+          .codebox.lgfont
+            pre(class="brush: xml").
+              &lt;tagname&gt;Content&lt;/tagname&gt;
+        p Der Inhalt eines Elements wird eingerahmt von einem Starttag: 
+          code.red &lt;tag&gt;
+          | Und einem Endtag: 
+          code.red &lt;/tag&gt;
+        p Das Endtag (Auch: "opening tag") besitz im Gegensatz zum Starttag (Auch "closing tag") einen Schrägstrich 
+          code.red /
+          |  (engl.: "slash" oder "forward slash")
+          
                 
         .nextslide  
       section#4.code
@@ -51,11 +75,39 @@ html(lang='en')
             h3 index.html
             .codetab
               pre(class="brush: xml").
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="en"&gt;
+                  &lt;head&gt;
+                    &lt;title&gt;HowToWeb2.0&lt;/title&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                  <h1> Überschrift </h1>
+                  <p>Absatz Nummmer eins</p>
+                  <p>Und noch ein Absatz</p>
+                 &lt;/body&gt;
+                &lt;/html&gt;
                 
         
         .previewside.preview
+          .prettydiv
+            h1 Überschrift
+            p Absatz Nummer eins
+            p Und noch ein Absatz
+            
+        .nextslide  
+      section#5.explanation.active
+        .previouslide
           
-        
+        h2 SelfHTML
+        .fourimages   
+          .quarter       
+            img(src="../assets/img/slides/basics/001.jpg")
+          .quarter       
+            img(src="../assets/img/slides/basics/002.jpg")
+          .quarter       
+            img(src="../assets/img/slides/basics/003.jpg")
+          .quarter       
+            img(src="../assets/img/slides/basics/004.jpg")
           
       
 

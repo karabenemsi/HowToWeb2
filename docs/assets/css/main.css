@@ -381,11 +381,11 @@
 
 .syntaxhighlighter table td.gutter .line {
   text-align: right !important;
-  padding: 0 0.5em 0 1em !important;
+  padding: 0.3em 0.5em 0 1em !important;
 }
 
 .syntaxhighlighter table td.code .line {
-  padding: 0 1em !important;
+  padding: 0.15em 1em !important;
 }
 
 .syntaxhighlighter.nogutter td.code .container textarea, .syntaxhighlighter.nogutter td.code .line {
@@ -1068,7 +1068,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   font-family: 'Roboto', sans-serif;
-  color: #666;
+  color: #353a45;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
@@ -1117,7 +1117,7 @@ a:hover, a:focus {
 
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
-  color: #222;
+  color: #353a45;
   font-weight: bold;
 }
 
@@ -1134,7 +1134,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .large, h2 {
-  color: #000;
+  color: #353a45;
   font-size: 4rem;
   font-weight: 300;
   margin: 0 0 3rem;
@@ -1163,6 +1163,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .center {
   text-align: center;
+}
+
+.justify {
+  text-align: justify;
 }
 
 p {
@@ -1227,7 +1231,7 @@ header h1 {
   line-height: 1;
 }
 
-header .homebox a, header .back a {
+header .homebox a, header .back a, header .forward a {
   display: block;
   position: fixed;
   padding: 0;
@@ -1237,24 +1241,28 @@ header .homebox a, header .back a {
   margin: 0;
 }
 
-header .homebox a svg, header .back a svg {
+header .homebox a svg, header .back a svg, header .forward a svg {
   display: block;
   position: static;
   width: 40%;
   margin: 30%;
 }
 
-header .homebox a path, header .back a path {
+header .homebox a path, header .back a path, header .forward a path {
   transition: all 0.2s ease-in-out;
   fill: #95DEE2;
 }
 
-header .homebox a:hover path, header .back a:hover path {
+header .homebox a:hover path, header .back a:hover path, header .forward a:hover path {
   fill: #2D5593;
 }
 
 header .back a {
   top: 5rem;
+}
+
+header .forward a {
+  top: 10rem;
 }
 
 footer {
@@ -1375,6 +1383,10 @@ section.active {
   top: 0;
 }
 
+.explanation {
+  font-size: 2rem;
+}
+
 .explanation .codebox {
   background: #282c34;
   border-radius: 5px;
@@ -1388,7 +1400,6 @@ section.active {
   margin: 1rem 0 0 0;
   font-size: 2rem;
   margin: 2rem auto;
-  text-align: justify;
 }
 
 .explanation p .important {
@@ -1431,6 +1442,83 @@ section.active {
 
 .explanation p code.pink {
   color: #ff1493;
+}
+
+.explanation .lgpad {
+  padding: 5rem 0;
+}
+
+.explanation .xlgpad {
+  padding: 7rem 0;
+}
+
+.explanation .spad {
+  padding: 2rem 0;
+}
+
+.explanation .xspad {
+  padding: 1rem 0;
+}
+
+.explanation .medpad {
+  padding: 3.5rem 0;
+}
+
+.explanation .nopad {
+  padding: 0;
+}
+
+.explanation .lgfont {
+  font-size: 3rem;
+}
+
+.explanation .xlgfont {
+  font-size: 5rem;
+}
+
+.explanation .sfont {
+  font-size: 1rem;
+}
+
+.explanation .xsfont {
+  font-size: 1.5rem;
+}
+
+.explanation .mfont {
+  font-size: 2rem;
+}
+
+.explanation .fourimages {
+  width: 100%;
+  height: 80%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.explanation .fourimages .quarter {
+  height: 45%;
+  margin: 0.5%;
+  width: 45%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.explanation .fourimages img {
+  height: 100%;
 }
 
 section.code {
@@ -1479,6 +1567,18 @@ section.code .previewside {
   background: #fff;
   width: 50%;
   overflow-y: scroll;
+}
+
+section.code .previewside .prettydiv {
+  padding: 0 1rem;
+}
+
+section.code .previewside h1 {
+  font-size: 3rem;
+}
+
+section.code .previewside p {
+  font-size: 1rem;
 }
 
 .indexpage main {
@@ -1622,8 +1722,8 @@ section.code .previewside {
   -webkit-transform-origin: left center;
   -ms-transform-origin: left center;
   transform-origin: left center;
-  -webkit-animation: index_listopen_a 0.7s 2s forwards;
-  animation: index_listopen_a 0.7s 2s forwards;
+  -webkit-animation: index_listopen_a 0.7s 1.2s forwards;
+  animation: index_listopen_a 0.7s 1.2s forwards;
   color: inherit;
 }
 
