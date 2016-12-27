@@ -2098,3 +2098,133 @@ section.code .nextslide {
 .slide_paragraph_1 .preview pre {
   margin: 5rem 0;
 }
+
+.slide_css_1 .demo {
+  position: relative;
+  width: 100%;
+  height: 80%;
+}
+
+.slide_css_1 .demo .d1 {
+  position: absolute;
+  top: 5rem;
+  left: 1rem;
+  height: 50%;
+  width: 60%;
+  border: 1rem solid #FFC800;
+  border-radius: 2rem;
+  z-index: 1;
+}
+
+.slide_css_1 .demo .d2 {
+  position: absolute;
+  top: 0;
+  left: 20rem;
+  height: 40%;
+  width: 50%;
+  z-index: 3;
+  background: rgba(45, 85, 147, 0.4);
+}
+
+.slide_css_1 .demo .d3 {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  height: 80%;
+  width: 15%;
+  background: rgba(152, 195, 121, 0.7);
+  z-index: 2;
+}
+
+.slide_css_1 .demo .d4 {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  z-index: 4;
+  font-size: 6rem;
+}
+
+.slide_css_1 .demo .d5 {
+  position: absolute;
+  top: 60%;
+  left: 1rem;
+  z-index: 5;
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 1rem;
+}
+
+.slide_css_1 .demo .d5 .color {
+  color: #006699;
+}
+
+.slide_css_1 .demo .d5 .box {
+  background: #282c34;
+  color: #fff;
+  padding: 0 1rem;
+}
+
+.slide_css_2 .demo {
+  position: relative;
+  width: 100%;
+  height: 80%;
+}
+
+.slide_css_2 .demo .d1 {
+  position: absolute;
+  top: 5rem;
+  left: 1rem;
+  height: 50%;
+  width: 60%;
+  border: 1rem solid #FFC800;
+  border-radius: 2rem;
+  z-index: 1;
+}
+
+.slide_css_2 .demo .d2 {
+  position: absolute;
+  top: 0;
+  left: 20rem;
+  height: 40%;
+  width: 50%;
+  z-index: 3;
+  background: rgba(45, 85, 147, 0.4);
+}
+
+.slide_css_2 .demo .d3 {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  height: 80%;
+  width: 15%;
+  background: rgba(152, 195, 121, 0.7);
+  z-index: 2;
+}
+
+.slide_css_2 .demo .d4 {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  z-index: 4;
+  font-size: 6rem;
+}
+
+.slide_css_2 .demo .d5 {
+  position: absolute;
+  top: 60%;
+  left: 1rem;
+  z-index: 5;
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 1rem;
+}
+
+.slide_css_2 .demo .d5 .color {
+  color: #006699;
+}
+
+.slide_css_2 .demo .d5 .box {
+  background: #282c34;
+  color: #fff;
+  padding: 0 1rem;
+}

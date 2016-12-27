@@ -9,13 +9,121 @@ html(lang='de')
   body
     include ../master/header.jade
     main
-      section#1.explanation.active
+      section#1.explanation.slide_css_1
+        h2 Cascading Style Sheets
+        .demo
+          .d1
+          .d2
+          .d3
+          p.d4 CSS = Aussehen und Farben
+          p.d5 Manipulate Text 
+            span.color Colors,
+            span.box Boxes
             
         .nextslide
       section#2.explanation
         .previouslide
-      
-      
+        h2 Inline CSS
+        p.center.lgfont.lgpad
+          code.red &lt;h1 style="color:red"&gt;Rote Überschrift&lt;/h1&gt;
+        
+        .nextslide
+      section#2.explanation
+        .previouslide
+        h2 Internal CSS
+          .codebox
+            pre(class="brush: xml").
+              &lt;head&gt;
+                &lt;title&gt;Hello&lt;/title&gt;
+                &lt;style&gt;
+                  h1 {
+                    color: red;
+                  }
+                &lt;/style&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;h1&gt; Rote Überschrift&lt;/h1&gt;
+              &lt;/bod&gt;
+              
+        
+        .nextslide
+      section#3.explanation
+        .previouslide
+        h2 External CSS
+        .codebox
+          pre(class="brush: xml").
+            &lt;head&gt;
+              &lt;title&gt;Hello&lt;/title&gt;
+              &lt;link rel="stylesheet" href="style.css"&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;h1&gt; Rote Überschrift&lt;/h1&gt;
+            &lt;/bod&gt;        
+            
+            
+        .nextslide
+      section#4.code.slide_css_2.active
+        .previouslide      
+        .codeside
+          .htmltab
+            h3 index.html
+            .codetab
+              pre(class="brush: xml").
+                &lt;head&gt;
+                  &lt;link rel="stylesheet" href="style.css"&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;div class="d1"&gt;&lt;/div&gt;&lt;div class="d2"&gt;&lt;/div&gt;
+                    &lt;div class="d3"&gt;&lt;/div&gt;
+                    &lt;p class="d4"&gt;CSS = Aussehen und Farben&lt;/p&gt;
+                    &lt;p class="d5"&gt;Manipulate Text
+                      &lt;span class="color"&gt;Colors,&lt;/span&gt;
+                      &lt;span class="box"&gt;Boxes&lt;/span&gt;&lt;/p&gt;
+                &lt;/body&gt;
+          .csstab
+            h3 style.css
+            .codetab
+              pre(class="brush: css").
+                .d1 {
+                  height: 50%;
+                  width: 60%;
+                  border: 1rem solid #FFC800;
+                  border-radius: 2rem;
+                }
+
+                .d2 {
+                  height: 40%;
+                  width: 50%;
+                  background: rgba(45, 85, 147, 0.4);
+                }
+
+                .d3 {
+                  height: 80%;
+                  width: 15%;
+                  background: rgba(152, 195, 121, 0.7);
+                }
+
+                .d4 {
+                  font-size: 6rem;
+                }
+
+                .d5 {
+                  font-size: 4rem;
+                  font-weight: 300;
+                  letter-spacing: 1rem;
+                }
+
+        
+        .previewside.preview
+          .demo
+            .d1
+            .d2
+            .d3
+            p.d4 CSS = Aussehen und Farben
+            p.d5 Manipulate Text 
+              span.color Colors,
+              span.box Boxes
+          
 
 
   include ../master/footer.jade
