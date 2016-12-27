@@ -25,7 +25,7 @@ $( document ).ready(function() {
     $nextslide.toggleClass('active')
   });
 
-  $('.previouslide').click(function(){
+  $('.previouslide').click(function(e){
     var id = $(this).parent().attr('id')
     var $parent = $(this).parent()
     id = parseInt(id) - 1
@@ -35,6 +35,5 @@ $( document ).ready(function() {
     $nextslide.toggleClass('active')
 
   });
-
 
 });

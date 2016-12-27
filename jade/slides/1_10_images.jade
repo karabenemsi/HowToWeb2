@@ -1,7 +1,7 @@
 -var pfad = "slides/"
 -var home = "../index.html"
--var next = "1_9_links.html"
--var previous = "1_11_tables.html"
+-var previous = "1_9_links.html"
+-var next = "1_11_tables.html"
 -var title = "Bilder"
 doctype html
 html(lang='de')
@@ -10,10 +10,13 @@ html(lang='de')
     include ../master/header.jade
     main
       section#1.explanation.active
-            
+        h2 Bilder
+        p.center.xlgpad.xlgfont
+          code.bluelight &lt;img src="bild.jpg" alt="Landschaft"&gt;
         .nextslide
       section#2.explanation
         .previouslide
+        img(src="../assets/img/big/img_b_145.jpg", alt="Shore" style="width:100%")
       
       
 

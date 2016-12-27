@@ -9,11 +9,36 @@ html(lang='de')
   body
     include ../master/header.jade
     main
-      section#1.explanation.active
-            
+      section#1.explanation
+        h2 Links
+        p.center.xlgpad.xlgfont
+          code.purple &lt;a href="url"&gt;Link Text&lt;/a&gt;
         .nextslide
       section#2.explanation
         .previouslide
+        h2 Externe Links
+        p.center.mpad.lgfont
+          code.purple &lt;a href="//google.com"&gt;Google&lt;/a&gt;
+        h2 Protokoll-Links
+        p.center.mpad.lgfont
+          code.green &lt;a href="mailto:demo@gmail.com"&gt;Mail an demo&lt;/a&gt;
+        .nextslide
+      section#3.explanation.active
+        .previouslide
+        h2 Interne Links
+        h3 Link  auf andere Seiten
+        .codebox
+          pre(class="brush: xml")
+            <a href="page2.html">Seite gleicher Ebene</a>
+            <a href="folder/page2.html">Seite in Ordner "folder"</a>
+            <a href="../page2.html">Seite auf höherer Ebene</a>
+            <a href="../../page2.html">Seite zwei Ebenen höher</a>
+        h3 Link  auf Ids
+        .codebox
+          pre(class="brush: xml")
+            <a href="#paragraph">Link zu Paragraph</a>
+            <p id="paragraph">lorem ipsum</p>
+
       
       
 

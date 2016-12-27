@@ -1233,6 +1233,7 @@ header h1 {
   padding: 1rem;
   font-size: 3rem;
   line-height: 1;
+  width: 20rem;
 }
 
 header .homebox a, header .back a, header .forward a {

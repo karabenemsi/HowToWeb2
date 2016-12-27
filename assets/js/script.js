@@ -6,4 +6,3 @@
 //@prepros-append highlighter/shBrushXml.js
 //@prepros-append highlighter/shBrushJScript.js
 //@prepros-append functions.js
-//@prepros-append contextmenu.js
