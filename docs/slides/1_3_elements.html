@@ -22,18 +22,76 @@
       <h1>Elemente</h1>
     </header>
     <main>
-      <section class="explanation" id="1">
-        <h2>Was ist HTML?</h2>
+      <section class="explanation active" id="1">
+        <h2>HTML Elemente</h2>
+        <p class="lgpad center xlgfont"><code class="orange">&lt;tagname&gt;Inhalt&lt;/tagname&gt;</code>
+          <h3>Paragraphen</h3>
+          <p class="mpad center lgfont"><code class="bluelight">&lt;p&gt; Lorem ipsum dolor...&lt;/p&gt;</code></p>
+          <h3>Leeere Elemente</h3>
+          <p class="mpad center lgfont"><code class="bluelight">&lt;br&gt;</code>, <code class="red">&lt;img src=".." alt="..."&gt;</code></p>
+        </p>
         <div class="nextslide"></div>
       </section>
       <section class="explanation" id="2">
         <div class="previouslide"></div>
+        <h2>Elemente verschachteln</h2>
+        <p class="center">HTML-Elemente können verschachtelt werden:</p>
+        <p class="center lgfont"><code class="red">&lt;body&gt; &lt;h1&gt;Überschrift&lt;/h1&gt; &lt;/body&gt;</code></p>
+        <div class="nextslide"></div>
+      </section>
+      <section class="code" id="3">
+        <div class="previouslide"></div>
+        <div class="codeside">
+          <h3>Verschachteltes Dokument</h3>
+          <div class="hmtltab">
+            <h3>index.html</h3>
+            <div class="codetab">
+              <pre class="brush: xml">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Verschachteltes Element&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Überschrift&lt;/h1&gt;
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+            </div>
+          </div>
+        </div>
+        <div class="previewside preview">
+          <div class="prettydiv">
+            <h1>Überschrift</h1>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+          </div>
+        </div>
+        <div class="nextslide"></div>
+      </section>
+      <section class="explanation" id="4">
+        <div class="previouslide"></div>
+        <h2>Schreibempfehlungen</h2>
+        <p class="sfont">Keine Pflicht aber empfohlen</p>
+        <p>Tags und Attribute klein schreiben<br><code class="red linetrough lgfont">&lt;H1&gt;...&lt;/H1&gt;</code><br><code class="red lgfont">&lt;h1&gt;...&lt;/h1&gt;</code></p>
+        <p>Verschachtelte Elemente mit 2 Leerzeichen einrücken</p>
+        <div class="codebox">
+          <pre class="brush: xml">&lt;html lang="de"&gt;
+  &lt;head&gt;
+    &lt;title&gt;HowToWeb2.0&lt;/title&gt;
+  &lt;/head&gt;
+
+
+
+</pre>
+        </div>
       </section>
     </main>
   </body>
   <footer>
     <p>KaraBeNemsi @ 2016</p>
-    <p>Build WB116|11</p>
+    <p>Build \B116f11</p>
   </footer>
   <script src="../assets/js/script.min.js" charset="utf-8"></script>
   <script>
