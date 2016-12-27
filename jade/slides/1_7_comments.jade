@@ -10,10 +10,16 @@ html(lang='de')
     include ../master/header.jade
     main
       section#1.explanation.active
-            
-        .nextslide
-      section#2.explanation
-        .previouslide
+        h2 Kommentare
+        p.lgfont.center.lgpad
+          code.default &lt;!-- Das ist ein Kommentar --&gt;
+        .codebox
+          pre(class="brush: xml").
+            &lt;!--
+              Das ist ein Blockkommentar
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Saepe voluptates fugiat sint quis laborum laboriosam quidem
+            --&gt;
       
       
 

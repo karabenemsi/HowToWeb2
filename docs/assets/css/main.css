@@ -1306,7 +1306,7 @@ main {
   position: absolute;
   left: 0;
   bottom: 3rem;
-  background: #95DEE2;
+  background: rgba(149, 222, 226, 0.2);
   top: 1rem;
   width: 3rem;
   height: 0.2rem;
@@ -1349,7 +1349,7 @@ main {
   position: absolute;
   left: 0;
   bottom: 3rem;
-  background: #95DEE2;
+  background: rgba(149, 222, 226, 0.2);
   top: 1.5rem;
   width: 3rem;
   height: 0.2rem;
@@ -1406,7 +1406,7 @@ section.active {
   margin: 2rem auto;
 }
 
-.explanation p .important {
+.explanation p strong {
   color: #FF5B4A;
   font-weight: 700;
   font-size: 1.5em;
@@ -1583,6 +1583,10 @@ section.code .previewside h1 {
 
 section.code .previewside p {
   font-size: 1rem;
+}
+
+section.code .nextslide {
+  bottom: 0;
 }
 
 .indexpage main {
@@ -2085,4 +2089,12 @@ section.code .previewside p {
 .preview .main img {
   width: 100%;
   margin: 2rem 0;
+}
+
+.slide_paragraph_1 .preview p {
+  margin: 1rem 0;
+}
+
+.slide_paragraph_1 .preview pre {
+  margin: 5rem 0;
 }

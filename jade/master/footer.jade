@@ -1,6 +1,6 @@
 footer
   p KaraBeNemsi @ #{(new Date()).getFullYear()}
-  p Build #{String.fromCharCode(65 + (new Date()).getDate())}B#{(new Date()).getYear()}#{String.fromCharCode(65 + (new Date()).getSeconds())}#{(new Date()).getMonth()}
+  p Build #{String.fromCharCode(65 + (new Date()).getDate() % 25)}B#{(new Date()).getYear()}#{String.fromCharCode(65 + (new Date()).getSeconds() % 25)}#{(new Date()).getMonth()}
     
 script(src="../assets/js/script.min.js", charset="utf-8")
 script.
