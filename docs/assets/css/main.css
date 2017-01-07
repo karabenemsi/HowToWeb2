@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * SyntaxHighlighter
  * http://alexgorbatchev.com/SyntaxHighlighter
@@ -1449,6 +1450,39 @@ section.active {
   color: #ff1493;
 }
 
+.explanation .fourimages {
+  width: 100%;
+  height: 80%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.explanation .fourimages .quarter {
+  height: 45%;
+  margin: 0.5%;
+  width: 45%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.explanation .fourimages img {
+  height: 100%;
+}
+
 .explanation .lgpad {
   padding: 5rem 0;
 }
@@ -1493,37 +1527,28 @@ section.active {
   font-size: 2rem;
 }
 
-.explanation .fourimages {
-  width: 100%;
-  height: 80%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.explanation .lgmar {
+  margin: 5rem 0;
 }
 
-.explanation .fourimages .quarter {
-  height: 45%;
-  margin: 0.5%;
-  width: 45%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.explanation .xlgmar {
+  margin: 7rem 0;
 }
 
-.explanation .fourimages img {
-  height: 100%;
+.explanation .smar {
+  margin: 2rem 0;
+}
+
+.explanation .xsmar {
+  margin: 1rem 0;
+}
+
+.explanation .medmar {
+  margin: 3.5rem 0;
+}
+
+.explanation .nomar {
+  margin: 0;
 }
 
 section.code {
@@ -1588,6 +1613,75 @@ section.code .previewside p {
 
 section.code .nextslide {
   bottom: 0;
+}
+
+table {
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+  border-collapse: collapse;
+}
+
+thead {
+  font-weight: 600;
+  font-size: 1em;
+}
+
+tbody {
+  font-weight: 400;
+  font-size: 1em;
+}
+
+td, th {
+  line-height: 1.5;
+  padding: 0.1rem 1.5em 0.1rem 0.5em;
+  margin: 0;
+  border: 0.15rem solid #353a45;
+}
+
+td:last-of-type, th:last-of-type {
+  padding-right: 0.5em;
+}
+
+th {
+  border-bottom: 0.3rem solid #353a45;
+}
+
+tr {
+  padding: 0;
+  margin: 0;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "“" "”" "‘" "’";
+}
+
+blockquote p.quote::before {
+  font-family: "Inconsolata", serif;
+  color: #cc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p.origin {
+  padding: 1rem 0 0 5rem;
+}
+
+blockquote p.origin::before {
+  content: ' ';
+  display: inline-block;
+  padding: 0;
+  margin: 0.2rem 1rem 0.4rem;
+  width: 1rem;
+  height: 0.2rem;
+  background: #353a45;
 }
 
 .indexpage main {
@@ -2228,4 +2322,10 @@ section.code .nextslide {
   background: #282c34;
   color: #fff;
   padding: 0 1rem;
+}
+
+.slide_div_1 .demodiv {
+  height: 10rem;
+  width: 10rem;
+  border: 1rem solid #578CA9;
 }

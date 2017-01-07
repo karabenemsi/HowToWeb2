@@ -1,0 +1,25 @@
+blockquote
+  background: #f9f9f9
+  border-left: 10px solid #ccc
+  margin: 1.5em 10px
+  padding: 0.5em 10px
+  quotes: "\201C""\201D""\2018""\2019"
+  p.quote
+    &::before
+      font-family: "Inconsolata", serif
+      color: #cc
+      content: open-quote
+      font-size: 4em
+      line-height: 0.1em
+      margin-right: 0.25em
+      vertical-align: -0.4em
+  p.origin
+    padding: 1rem 0 0 5rem
+    &::before
+      content: ' '
+      display: inline-block
+      padding: 0
+      margin: 0.2rem 1rem 0.4rem
+      width: 1rem
+      height: 0.2rem
+      background: $c_theme_font
