@@ -1237,7 +1237,7 @@ header h1 {
   width: 20rem;
 }
 
-header .homebox a, header .back a, header .forward a {
+header .homebox a, header .back a, header .forward a, header .sleep a {
   display: block;
   position: fixed;
   padding: 0;
@@ -1247,19 +1247,19 @@ header .homebox a, header .back a, header .forward a {
   margin: 0;
 }
 
-header .homebox a svg, header .back a svg, header .forward a svg {
+header .homebox a svg, header .back a svg, header .forward a svg, header .sleep a svg {
   display: block;
   position: static;
   width: 40%;
   margin: 30%;
 }
 
-header .homebox a path, header .back a path, header .forward a path {
+header .homebox a path, header .back a path, header .forward a path, header .sleep a path {
   transition: all 0.2s ease-in-out;
   fill: #95DEE2;
 }
 
-header .homebox a:hover path, header .back a:hover path, header .forward a:hover path {
+header .homebox a:hover path, header .back a:hover path, header .forward a:hover path, header .sleep a:hover path {
   fill: #2D5593;
 }
 
@@ -1269,6 +1269,10 @@ header .back a {
 
 header .forward a {
   top: 10rem;
+}
+
+header .sleep a {
+  top: 15rem;
 }
 
 footer {
@@ -2059,6 +2063,43 @@ blockquote p.origin::before {
     -webkit-transform: translateX(-50%) rotate(45deg);
     transform: translateX(-50%) rotate(45deg);
   }
+}
+
+body.sleeppage {
+  height: 100vh;
+  width: 100vw;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+body.sleeppage .wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: #282c34;
+}
+
+body.sleeppage img {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+body.sleeppage .fadeIn {
+  opacity: 1;
+}
+
+body.sleeppage .fadeOut {
+  opacity: 0;
 }
 
 .preview {

@@ -3,13 +3,14 @@
 -var next = "1_10_images.html"
 -var previous = "1_8_css.html"
 -var title = "Links"
+-var sleep = "../sleep.html"
 doctype html
 html(lang='de')
   include ../master/head.jade
   body
     include ../master/header.jade
     main
-      section#1.explanation
+      section#1.explanation.active
         h2 Links
         p.center.xlgpad.xlgfont
           code.purple &lt;a href="url"&gt;Link Text&lt;/a&gt;
@@ -23,7 +24,7 @@ html(lang='de')
         p.center.mpad.lgfont
           code.green &lt;a href="mailto:demo@gmail.com"&gt;Mail an demo&lt;/a&gt;
         .nextslide
-      section#3.explanation.active
+      section#3.explanation
         .previouslide
         h2 Interne Links
         h3 Link  auf andere Seiten

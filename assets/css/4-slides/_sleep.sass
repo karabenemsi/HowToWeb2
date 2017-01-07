@@ -1,0 +1,26 @@
+body.sleeppage
+  height: 100vh
+  width: 100vw
+  line-height: 1
+  padding: 0
+  margin: 0
+  overflow: hidden
+  .wrapper
+    height: 100%
+    width: 100%
+    position: relative
+    background: $c_theme_bg_dark
+  img
+    position: absolute
+    padding: 0
+    margin: 0
+    left: 50%
+    top: 0
+    transform: translateX(-50%)
+    height: 100%
+    transition: all 0.5s ease-in-out
+
+  .fadeIn
+    opacity: 1
+  .fadeOut
+    opacity: 0

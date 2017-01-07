@@ -3,6 +3,7 @@
 -var previous = "1_9_links.html"
 -var next = "1_11_tables.html"
 -var title = "Bilder"
+-var sleep = "../sleep.html"
 doctype html
 html(lang='de')
   include ../master/head.jade
@@ -16,7 +17,19 @@ html(lang='de')
         .nextslide
       section#2.explanation
         .previouslide
-        img(src="../assets/img/big/img_b_145.jpg", alt="Shore" style="width:100%")
+        .fourimages   
+          .quarter       
+            img(src="../assets/img/big/img_b_145.jpg")
+          .quarter       
+            img(src="../assets/img/big/img_b_009.jpg")
+          .quarter       
+            img(src="../assets/img/big/img_b_100.jpg")
+          .quarter       
+            img(src="../assets/img/big/img_b_142.jpg")
+        .nextslide
+      section#3.explanation
+        .previouslide
+        img(src="../assets/img/big/img_b_083.jpg", alt="Shore" style="width:100%")
       
       
 
