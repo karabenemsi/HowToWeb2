@@ -36,4 +36,41 @@ $( document ).ready(function() {
 
   });
 
+
+  //sleep
+  imgstart = 1
+  imgrange = 145
+  imgname = 'assets/img/big/img_b_'
+  imgend = '.jpg'
+  if ($('body').hasClass('sleeppage')) {
+    i = imgstart
+    setInterval(function(){
+      $img_one = $('img:first-of-type');
+      $img_two = $('img:last-of-type');
+      if (i%2 == 0) {
+        console.log('C');
+        $img_one.attr('src',imgname + zfill(i, 3) + imgend)
+        $img_one.toggleClass('in');
+        $img_two.toggleClass('out');
+      } else {
+        $img_two.attr('src',imgname + zfill(i, 3) + imgend)
+        $img_one.toggleClass('in');
+        $img_two.toggleClass('out');
+        console.log('B');
+      }
+      if (i == imgrange) {
+        i = imgstart
+      } else {
+        i++;
+      }
+
+    },2000)
+  }
+
+  function zfill(number, size) {
+    number = number.toString();
+    while (number.length < size) number = "0" + number;
+    return number;
+  }
+
 });

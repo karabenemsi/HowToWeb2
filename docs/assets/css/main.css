@@ -2094,12 +2094,62 @@ body.sleeppage img {
   transition: all 0.5s ease-in-out;
 }
 
-body.sleeppage .fadeIn {
+body.sleeppage .in {
   opacity: 1;
 }
 
-body.sleeppage .fadeOut {
+body.sleeppage .out {
   opacity: 0;
+}
+
+body.sleeppage .startbutton {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 5rem;
+  height: 5rem;
+  background: transparent;
+  z-index: 10000;
+}
+
+body.sleeppage .exit {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  height: 2rem;
+  width: 2rem;
+  z-index: 1000;
+}
+
+body.sleeppage .exit::after, body.sleeppage .exit::before {
+  content: ' ';
+  width: 2rem;
+  height: 0.2rem;
+  position: absolute;
+  top: calc(50% - 0.1rem);
+  left: 0;
+  border-radius: 0.1rem;
+  transition: all 0.5s;
+  background: rgba(20, 38, 66, 0.2);
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+}
+
+body.sleeppage .exit::after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+body.sleeppage .exit::before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+body.sleeppage .exit:hover::after, body.sleeppage .exit:hover::before {
+  background: #FFC800;
 }
 
 .preview {
