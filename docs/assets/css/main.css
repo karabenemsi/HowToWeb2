@@ -2086,11 +2086,11 @@ body.sleeppage img {
   padding: 0;
   margin: 0;
   left: 50%;
-  top: 0;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  height: 100%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
   transition: all 0.5s ease-in-out;
 }
 
@@ -2419,4 +2419,76 @@ body.sleeppage .exit:hover::after, body.sleeppage .exit:hover::before {
   height: 10rem;
   width: 10rem;
   border: 1rem solid #578CA9;
+}
+
+.slide_forms_1 .input-block {
+  height: auto;
+  width: 50rem;
+  margin: 10rem auto 0;
+  background: #578CA9;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+}
+
+.slide_forms_1 .input-group {
+  margin: 1rem auto 0;
+  position: relative;
+  width: 80%;
+  font-family: 'Roboto Slab', serif;
+}
+
+.slide_forms_1 .input-group input {
+  width: calc(100% - 1.5rem);
+  height: 3rem;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #142642;
+  padding: 1.5rem 0 0.5rem 1.5rem;
+  font-size: 1.5rem;
+  transition: all 1.3s;
+  color: #FFC800;
+  z-index: 20;
+}
+
+.slide_forms_1 .input-group input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #FFC800;
+}
+
+.slide_forms_1 .input-group input.has-content + label,
+.slide_forms_1 .input-group input:focus + label {
+  font-size: 0.6rem;
+  color: rgba(255, 200, 0, 0.4);
+  position: absolute;
+  top: 0rem;
+  left: 0.5rem;
+}
+
+.slide_forms_1 .input-group label {
+  font-size: 1rem;
+  color: #142642;
+  position: absolute;
+  top: 2.5rem;
+  left: 1rem;
+  transition: all 0.5s;
+  pointer-events: none;
+}
+
+.slide_forms_1 .input-group input[type="submit"] {
+  border: 2px solid #142642;
+  border-radius: 0;
+  padding: 0;
+  width: 100%;
+  margin: 2rem 0;
+  transition: all 0.6s;
+  cursor: pointer;
+  color: #142642;
+  font-size: 80%;
+  font-family: 'Roboto Slab', serif;
+}
+
+.slide_forms_1 .input-group input[type="submit"]:hover, .slide_forms_1 .input-group input[type="submit"]:focus {
+  border: 2px solid #FFC800;
+  color: rgba(255, 200, 0, 0.8);
 }

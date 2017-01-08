@@ -28,16 +28,33 @@
     <main>
       <section class="explanation active" id="1">
         <h2>Klassen</h2>
+        <h3>Bekannt:</h3>
+        <div class="codebox">
+          <pre class="brush: xml">&lt;p style="color: green"&gt;lorem ipsum&lt;/p&gt;
+&lt;p style="color: green"&gt;lorem ipsum&lt;/p&gt;
+&lt;p style="color: green"&gt;lorem ipsum&lt;/p&gt;</pre>
+        </div>
+        <h3>Besser:</h3>
+        <div class="codebox">
+          <pre class="brush: xml">&lt;style&gt; .green{color:green} &lt;/style&gt;
+&lt;p class="green"&gt;lorem ipsum&lt;/p&gt;
+&lt;p class="green"&gt;lorem ipsum&lt;/p&gt;
+&lt;p class="green"&gt;lorem ipsum&lt;/p&gt;</pre>
+        </div>
         <div class="nextslide"></div>
       </section>
       <section class="explanation" id="2">
         <div class="previouslide"></div>
+        <h3>In HTML:</h3>
+        <p class="center xlgfont lgpad"><code class="bluelight">&lt;h1 class="blue"&gt;Blau&lt;/h1&gt;</code></p>
+        <h3>In CSS:</h3>
+        <p class="center xlgfont lgpad"><code class="orange">.blue {}</code></p>
       </section>
     </main>
   </body>
   <footer>
     <p>KaraBeNemsi @ 2017</p>
-    <p>Build HB117J0</p>
+    <p>Build IB117K0</p>
   </footer>
   <script src="../assets/js/script.min.js" charset="utf-8"></script>
   <script>
