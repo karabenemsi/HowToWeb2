@@ -2492,3 +2492,8 @@ body.sleeppage .exit:hover::after, body.sleeppage .exit:hover::before {
   border: 2px solid #FFC800;
   color: rgba(255, 200, 0, 0.8);
 }
+
+.livewrite .boldblue {
+  font-weight: bold;
+  color: blue;
+}

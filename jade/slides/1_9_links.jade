@@ -29,16 +29,55 @@ html(lang='de')
         h2 Interne Links
         h3 Link  auf andere Seiten
         .codebox
-          pre(class="brush: xml")
-            <a href="page2.html">Seite gleicher Ebene</a>
-            <a href="folder/page2.html">Seite in Ordner "folder"</a>
-            <a href="../page2.html">Seite auf höherer Ebene</a>
-            <a href="../../page2.html">Seite zwei Ebenen höher</a>
+          pre(class="brush: xml").
+            &lt;a href="page2.html"&gt;Seite gleicher Ebene&lt;/a&gt;
+            &lt;a href="folder/page2.html"&gt;Seite in Ordner "folder"&lt;/a&gt;
+            &lt;a href="../page2.html"&gt;Seite auf höherer Ebene&lt;/a&gt;
+            &lt;a href="../../page2.html"&gt;Seite zwei Ebenen höher&lt;/a&gt;
         h3 Link  auf Ids
         .codebox
-          pre(class="brush: xml")
-            <a href="#paragraph">Link zu Paragraph</a>
-            <p id="paragraph">lorem ipsum</p>
+          pre(class="brush: xml").
+            &lt;a href="#paragraph"&gt;Link zu Paragraph&lt;/a&gt;
+            &lt;p id="paragraph"&gt;lorem ipsum&lt;/p&gt;
+        .nextslide  
+      section#4.code
+        .previouslide
+        .codeside
+          .htmltab
+            h3 index.html
+            .codetab
+              pre(class="brush: xml").
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang='de'&gt;
+                  &lt;head&gt;
+                    &lt;tite&gt;Eine HTML-Seite&lt;/tite&gt;
+                    &lt;link rel="stylesheet" href="main.css"&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                    &lt;!-- ... --&gt;
+                    &lt;a href="//karabenemsi.github.io/HowToWeb2"&gt; HowToWeb 2&lt;/a&gt;
+                  &lt;/body&gt;
+                &lt;/html&gt;
+          .csstab
+            h3 main.css
+            pre(class="brush: css").
+              p {
+                font-weight: bold;
+                color: blue;
+              }
+            
+                        
+        .previewside.preview.livewrite
+          h1 Überschrift
+          h2 Überschrift 2
+          h3 Überschrift 3
+          p.boldblue Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          pre.
+            Dunkel war’s, der Mond schien helle,
+            schneebedeckt die grüne Flur,
+            als ein Wagen blitzesschnelle,
+            langsam um die Ecke fuhr.
+          a(href="//karabenemsi.github.io/HowToWeb2") HowToWeb 2
 
       
       

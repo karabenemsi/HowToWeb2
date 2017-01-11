@@ -28,27 +28,63 @@
     <main>
       <section class="explanation active" id="1">
         <h2>Bilder</h2>
-        <p class="center xlgpad xlgfont"><code class="bluelight">&lt;img src="bild.jpg" alt="Landschaft"&gt;</code></p>
+        <p class="center lgpad lgfont"><code class="bluelight">&lt;img src="bild.jpg" alt="Landschaft"&gt;</code></p>
+        <p class="center lgpad lgfont"><code class="orange">&lt;img srcset="bild.jpg 3000w, b_bild.jpg 1920w, m_bild.jpg 800w, s_bild.jpg 400w" src="s_bild.jpg" alt="Landschaft"&gt;</code></p>
         <div class="nextslide"></div>
       </section>
       <section class="explanation" id="2">
         <div class="previouslide"></div>
         <div class="fourimages">  
-          <div class="quarter">      <img src="../assets/img/big/img_b_145.jpg"></div>
-          <div class="quarter">      <img src="../assets/img/big/img_b_009.jpg"></div>
-          <div class="quarter">      <img src="../assets/img/big/img_b_100.jpg"></div>
-          <div class="quarter">      <img src="../assets/img/big/img_b_142.jpg"></div>
+          <div class="quarter">      <img srcset="../assets/img/full/img_full_145.jpg 4534w, ../assets/img/big/img_b_145.jpg 1920w, ../assets/img/medium/img_m_145.jpg 800w,            ../assets/img/small/img_s_145.jpg 400w" src="../assets/img/small/img_s_145.jpg"></div>
+          <div class="quarter"><img srcset="../assets/img/full/img_full_009.jpg 5616w, ../assets/img/big/img_b_009.jpg 1920w, ../assets/img/medium/img_m_009.jpg 800w,            ../assets/img/small/img_s_009.jpg 400w" src="../assets/img/small/img_s_009.jpg"></div>
+          <div class="quarter"><img srcset="../assets/img/full/img_full_100.jpg 4343w, ../assets/img/big/img_b_100.jpg 1920w, ../assets/img/medium/img_m_100.jpg 800w,            ../assets/img/small/img_s_100.jpg 400w" src="../assets/img/small/img_s_100.jpg"></div>
+          <div class="quarter"><img srcset="../assets/img/full/img_full_142.jpg 5341w, ../assets/img/big/img_b_142.jpg 1920w, ../assets/img/medium/img_m_142.jpg 800w,            ../assets/img/small/img_s_142.jpg 400w" src="../assets/img/small/img_s_142.jpg"></div>
         </div>
         <div class="nextslide"></div>
       </section>
       <section class="explanation" id="3">
-        <div class="previouslide"></div><img src="../assets/img/big/img_b_083.jpg" alt="Shore" style="width:100%">
+        <div class="previouslide"></div><img srcset="../assets/img/full/img_full_083.jpg 3415w, ../assets/img/big/img_b_083.jpg 1920w, ../assets/img/medium/img_m_083.jpg 800w,            ../assets/img/small/img_s_083.jpg 400w" src="../assets/img/small/img_s_083.jpg" alt="Shore" style="width:100%">
+        <div class="nextslide"> </div>
+      </section>
+      <section class="code" id="4">
+        <div class="previouslide"></div>
+        <div class="codeside">
+          <div class="htmltab">
+            <h3>index.html</h3>
+            <div class="codetab">
+              <pre class="brush: xml">&lt;!DOCTYPE html&gt;
+&lt;html lang='de'&gt;
+  &lt;head&gt;
+    &lt;tite&gt;Eine HTML-Seite&lt;/tite&gt;
+    &lt;link rel="stylesheet" href="main.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- ... --&gt;
+    &lt;a href="//karabenemsi.github.io/HowToWeb2"&gt; HowToWeb 2&lt;/a&gt;
+    &lt;img src="img/img_b_???.jpg" alt="Bildbeschreibung" style="width: 100%;"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+            </div>
+          </div>
+        </div>
+        <div class="previewside preview livewrite">
+          <h1>Überschrift</h1>
+          <h2>Überschrift 2</h2>
+          <h3>Überschrift 3</h3>
+          <p class="boldblue">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <pre>Dunkel war’s, der Mond schien helle,
+schneebedeckt die grüne Flur,
+als ein Wagen blitzesschnelle,
+langsam um die Ecke fuhr.</pre><a href="//karabenemsi.github.io/HowToWeb2">HowToWeb 2</a><img src="../assets/img/big/img_b_035.jpg" alt="alt" style="width:100%">
+        </div>
       </section>
     </main>
   </body>
   <footer>
     <p>KaraBeNemsi @ 2017</p>
-    <p>Build HB117J0</p>
+    <p>Build LB117X0</p>
   </footer>
   <script src="../assets/js/script.min.js" charset="utf-8"></script>
   <script>

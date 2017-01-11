@@ -11,11 +11,75 @@ html(lang='de')
     include ../master/header.jade
     main
       section#1.explanation.active
-            
+        h2 HTML die 5te
+        h3.lgfont Vereinfachungen
+        p Früher:
+        p
+          code.green &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+          br
+          code.orange &lt;meta http-equiv="content-type" content="text/html; charset=utf-8"&gt;
+          br
+          code.bluelight &lt;link type="text/css" rel="stylesheet" src="style.css&gt;"
+          br
+          code.pink &lt;script src="script.js" type="text/javascript"&gt;&lt;/script&gt;
+          
+          
+        
+        p jetzt:
+        p
+          code.green &lt;!DOCTYPTE html&gt;
+          br
+          code.orange &lt;meta charset="utf-8"&gt;
+          br
+          code.bluelight &lt;link rel="stylesheet" src="style.css&gt;"
+          br
+          code.pink &lt;script src="script.js"&gt;&lt;/script&gt;
+
         .nextslide
       section#2.explanation
         .previouslide
-      
+        h3.lgfont Trennung von Inhalt und Aussehen
+        p Früher praktiziert:
+        p 
+         code.green &lt;p  align="justify" bgcolor="blue"&gt;&lt;font size="2" face="Verdana"  color="red"&gt; HI &lt;/font&gt;&lt/p&gt;
+          
+        
+        p heute:
+        p
+          code.green &lt;p style="color:red; text-align:justify; background-color:blue; font-size: 2em; font-family:'Verdana'"&gt; HI &lt;/p&gt;
+        p oder:
+        p
+          code.orange &lt;style&gt; p { color:red; text-align:justify; background-color:blue; font-size: 2em; font-family:'Verdana'} &lt;/style&gt;
+          code.green &lt;p&gt; HI &lt;/p&gt;
+          
+        
+        .nextslide
+      section#3.explanation
+        .previouslide
+        h3.lgfont Semantische Elemente
+
+        p Neue semantische Elemente:
+        p.center.lgfont.spad
+          code.red main
+        p.center.lgfont.spad
+          code.green aside
+        p.center.lgfont.spad
+          code.purple header
+        p.center.lgfont.spad
+          code.orange footer
+        
+        
+        .nextslide
+      section#4.explanation
+        .previouslide
+        h3.lgfont Medienelemente
+
+        p.center.lgfont.spad
+          code.red audio
+        p.center.lgfont.spad
+          code.purple video
+          
+              
       
 
 

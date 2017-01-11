@@ -27,16 +27,46 @@
     </header>
     <main>
       <section class="explanation active" id="1">
+        <h2>HTML die 5te</h2>
+        <h3 class="lgfont">Vereinfachungen</h3>
+        <p>Früher:</p>
+        <p><code class="green">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</code><br><code class="orange">&lt;meta http-equiv="content-type" content="text/html; charset=utf-8"&gt;</code><br><code class="bluelight">&lt;link type="text/css" rel="stylesheet" src="style.css&gt;"</code><br><code class="pink">&lt;script src="script.js" type="text/javascript"&gt;&lt;/script&gt;</code></p>
+        <p>jetzt:</p>
+        <p><code class="green">&lt;!DOCTYPTE html&gt;</code><br><code class="orange">&lt;meta charset="utf-8"&gt;</code><br><code class="bluelight">&lt;link rel="stylesheet" src="style.css&gt;"</code><br><code class="pink">&lt;script src="script.js"&gt;&lt;/script&gt;</code></p>
         <div class="nextslide"></div>
       </section>
       <section class="explanation" id="2">
         <div class="previouslide"></div>
+        <h3 class="lgfont">Trennung von Inhalt und Aussehen</h3>
+        <p>Früher praktiziert:</p>
+        <p> <code class="green">&lt;p  align="justify" bgcolor="blue"&gt;&lt;font size="2" face="Verdana"  color="red"&gt; HI &lt;/font&gt;&lt/p&gt;</code></p>
+        <p>heute:</p>
+        <p><code class="green">&lt;p style="color:red; text-align:justify; background-color:blue; font-size: 2em; font-family:'Verdana'"&gt; HI &lt;/p&gt;</code></p>
+        <p>oder:</p>
+        <p><code class="orange">&lt;style&gt; p { color:red; text-align:justify; background-color:blue; font-size: 2em; font-family:'Verdana'} &lt;/style&gt;</code><code class="green">&lt;p&gt; HI &lt;/p&gt;</code></p>
+        <div class="nextslide"></div>
+      </section>
+      <section class="explanation" id="3">
+        <div class="previouslide"></div>
+        <h3 class="lgfont">Semantische Elemente</h3>
+        <p>Neue semantische Elemente:</p>
+        <p class="center lgfont spad"><code class="red">main</code></p>
+        <p class="center lgfont spad"><code class="green">aside</code></p>
+        <p class="center lgfont spad"><code class="purple">header</code></p>
+        <p class="center lgfont spad"><code class="orange">footer</code></p>
+        <div class="nextslide"></div>
+      </section>
+      <section class="explanation" id="4">
+        <div class="previouslide"></div>
+        <h3 class="lgfont">Medienelemente</h3>
+        <p class="center lgfont spad"><code class="red">audio</code></p>
+        <p class="center lgfont spad"><code class="purple">video</code></p>
       </section>
     </main>
   </body>
   <footer>
     <p>KaraBeNemsi @ 2017</p>
-    <p>Build HB117K0</p>
+    <p>Build LB117U0</p>
   </footer>
   <script src="../assets/js/script.min.js" charset="utf-8"></script>
   <script>

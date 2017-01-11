@@ -44,22 +44,63 @@
         <h2>Interne Links</h2>
         <h3>Link  auf andere Seiten</h3>
         <div class="codebox">
-          <pre class="brush: xml"><a href="page2.html">Seite gleicher Ebene</a>
-<a href="folder/page2.html">Seite in Ordner "folder"</a>
-<a href="../page2.html">Seite auf höherer Ebene</a>
-<a href="../../page2.html">Seite zwei Ebenen höher</a></pre>
+          <pre class="brush: xml">&lt;a href="page2.html"&gt;Seite gleicher Ebene&lt;/a&gt;
+&lt;a href="folder/page2.html"&gt;Seite in Ordner "folder"&lt;/a&gt;
+&lt;a href="../page2.html"&gt;Seite auf höherer Ebene&lt;/a&gt;
+&lt;a href="../../page2.html"&gt;Seite zwei Ebenen höher&lt;/a&gt;</pre>
         </div>
         <h3>Link  auf Ids</h3>
         <div class="codebox">
-          <pre class="brush: xml"><a href="#paragraph">Link zu Paragraph</a>
-<p id="paragraph">lorem ipsum</p></pre>
+          <pre class="brush: xml">&lt;a href="#paragraph"&gt;Link zu Paragraph&lt;/a&gt;
+&lt;p id="paragraph"&gt;lorem ipsum&lt;/p&gt;</pre>
+        </div>
+        <div class="nextslide"> </div>
+      </section>
+      <section class="code" id="4">
+        <div class="previouslide"></div>
+        <div class="codeside">
+          <div class="htmltab">
+            <h3>index.html</h3>
+            <div class="codetab">
+              <pre class="brush: xml">&lt;!DOCTYPE html&gt;
+&lt;html lang='de'&gt;
+  &lt;head&gt;
+    &lt;tite&gt;Eine HTML-Seite&lt;/tite&gt;
+    &lt;link rel="stylesheet" href="main.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- ... --&gt;
+    &lt;a href="//karabenemsi.github.io/HowToWeb2"&gt; HowToWeb 2&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+            </div>
+          </div>
+          <div class="csstab">
+            <h3>main.css</h3>
+            <pre class="brush: css">p {
+  font-weight: bold;
+  color: blue;
+}
+
+          </pre>
+          </div>
+        </div>
+        <div class="previewside preview livewrite">
+          <h1>Überschrift</h1>
+          <h2>Überschrift 2</h2>
+          <h3>Überschrift 3</h3>
+          <p class="boldblue">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <pre>Dunkel war’s, der Mond schien helle,
+schneebedeckt die grüne Flur,
+als ein Wagen blitzesschnelle,
+langsam um die Ecke fuhr.</pre><a href="//karabenemsi.github.io/HowToWeb2">HowToWeb 2</a>
         </div>
       </section>
     </main>
   </body>
   <footer>
     <p>KaraBeNemsi @ 2017</p>
-    <p>Build HB117J0</p>
+    <p>Build LB117G0</p>
   </footer>
   <script src="../assets/js/script.min.js" charset="utf-8"></script>
   <script>
