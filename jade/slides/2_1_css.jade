@@ -1,0 +1,41 @@
+-var pfad = "slides/"
+-var home = "../index.html"
+-var next = '2_2_syntax.html'
+-var previous = home
+-var title = "CSS"
+-var sleep = "../sleep.html"
+doctype html
+html(lang='de')
+  include ../master/head.jade
+  body.cssslides
+    include ../master/header.jade
+    main
+      section#1.explanation.active
+        h2 CSS Cascading Style Sheets
+        p italienisch cascata, [stufenweiser] Wasserfall
+        img(style="height:70%;display:block;margin:0 auto;",src="../assets/img/big/img_b_048.jpg", alt="Wasserfall")
+        .nextslide
+      section#2.explanation
+        .previouslide
+        .codebox
+          pre(class="brush: css").
+            Autos in Deutschland {
+              color: blau;
+            }
+            Autos in Deutschland in Ebingen {
+              color: rot;
+            }
+            Autos in Deutschland in Ebingen von Groz-Beckert {
+              color: grün;
+            }
+            Autos in Deutschland {
+              color: orange;
+            }
+            Autos von Groz-Beckert {
+             color: pink;
+            }
+      
+      
+
+
+  include ../master/footer.jade
