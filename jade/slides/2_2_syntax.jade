@@ -1,6 +1,6 @@
 -var pfad = "slides/"
 -var home = "../index.html"
--var next = '2_2_einbinden.html'
+-var next = '2_3_einbinden.html'
 -var previous = '2_1_css.html'
 -var title = "Syntax"
 -var sleep = "../sleep.html"
@@ -12,11 +12,12 @@ html(lang='de')
     main
       section#1.explanation.active
         h2 CSS Syntax
-
-      section#2.explanation
-        .previouslide
-
-      
+        p.center.xlgfont.lgpad
+          code.orange h1 {color: blue;}
+        p.center.xlgfont.lgpad
+          code.bluelight Selektor {Property: Value;}
+        p.center.lgfont.lgpad
+          code.pink Selektor {Eigenschaft: Wert;}
 
 
   include ../master/footer.jade

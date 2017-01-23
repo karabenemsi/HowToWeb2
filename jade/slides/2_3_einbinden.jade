@@ -1,0 +1,48 @@
+-var pfad = "slides/"
+-var home = "../index.html"
+-var next = '2_4_vererbung.html'
+-var previous = '2_2_syntax.html'
+-var title = "Einbinden"
+-var sleep = "../sleep.html"
+doctype html
+html(lang='de')
+  include ../master/head.jade
+  body.cssslides
+    include ../master/header.jade
+    main
+      section#1.explanation.active
+        h2 Einbinden
+        h3 Inline
+        .codebox
+          pre(class="brush: xml;").
+            &lt;h1 style="color:blue;text-align:right"&gt;This is a heading.&lt;/h1&gt;
+        .nextslide
+      section#2.explanation
+        .previouslide
+        h3 Stylesheet im Head
+        .codebox
+          pre(class="brush: xml;").
+            &lt;head&gt;
+              &lt;style&gt;
+                h1 {
+                  color: blue;
+                  text-align: right;
+                }
+              &lt;/style&gt;
+            &lt;/head&gt;
+        .nextslide
+      section#3.explanation
+        .previouslide
+        h3 Externes Stylesheet
+        .codebox
+          pre(class="brush: xml;").
+            &lt;head&gt;
+              &lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
+            &lt;/head&gt;
+        h3 Import im Stylesheet
+        .codebox
+          pre(class="brush: css").
+            @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,300,700');
+
+
+  include ../master/footer.jade
