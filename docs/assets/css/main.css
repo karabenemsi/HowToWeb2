@@ -2502,3 +2502,11 @@ body.sleeppage .exit:hover::after, body.sleeppage .exit:hover::before {
   font-weight: bold;
   color: blue;
 }
+
+.cssslides .colordemo1 {
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  float: right;
+}
