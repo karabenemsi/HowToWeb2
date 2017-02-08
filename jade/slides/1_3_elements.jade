@@ -17,7 +17,7 @@ html(lang='de')
           h3 Paragraphen
           p.mpad.center.lgfont
             code.bluelight &lt;p&gt; Lorem ipsum dolor...&lt;/p&gt;
-          h3 Leeere Elemente
+          h3 Leere Elemente
           p.mpad.center.lgfont
             code.bluelight &lt;br&gt;
             | , 
@@ -85,21 +85,24 @@ html(lang='de')
           .htmltab
             h3 index.html
             .codetab
-              &lt;!DOCTYPE html&gt;
-              &lt;html lang='de'&gt;
-                &lt;head&gt;
-                  &lt;tite&gt;Eine HTML-Seite&lt;/tite&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                  &lt;h1&gt;Überschrift&lt;/h1&gt;
-                  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
-                &lt;/body&gt;
-                
-              &lt;/html&gt;
+              pre(class="brush: xml").
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang='de'&gt;
+                  &lt;head&gt;
+                    &lt;tite&gt;Eine HTML-Seite&lt;/tite&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                    &lt;h1&gt;Überschrift&lt;/h1&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+                  &lt;/body&gt;
+                  
+                &lt;/html&gt;
                         
         .previewside.preview
-          h1 Überschrift
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          .livewrite
+            h1 Überschrift
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           
           
       
