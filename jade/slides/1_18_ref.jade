@@ -11,17 +11,854 @@ html(lang='de')
     include ../master/header.jade
     main
       section#1.explanation.active
-        h2 Nachschlagewerke:
-        p.center.lgfont.lgpad
-          a(href="//w3schools.com") W3Schools
-        p.center.lgfont.lgpad
-          a(href="//developer.mozilla.org/de/docs/Web/HTML") Mozilla Developer Network
-        p.center.lgfont.lgpad
-          a(href="//wiki.selfhtml.org/wiki/HTML") Selfhtml
+        h2 Heute nicht behandelte Elemente:
+        ul.reflisttags
+          li
+            code.white abbr
+            .description(data-open="false")
+              h3
+                code.white &lt;abbr&gt;
+              p Definiert eine Abkürzung oder ein Akronym Bsp: "ASAP", "MfG", "WHO"
+              p Gibt Browsern, Suchmaschinen und Übersetzern hilfreiche Informationen
+              codebox
+                pre(class="brush: xml").
+                  The &lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt; was founded in 1948.
+          li
+            code.white address
+            .description(data-open="false")
+              h3
+                code.white &lt;address&gt;
+              p The 
+                code &lt;address&gt;
+                | tag defines the contact information for the author/owner of a document or an article. If the 
+                code &lt;address&gt;
+                | element is inside the 
+                code &lt;body&gt;
+                | element, it represents contact information for the document. If the 
+                code &lt;address&gt;
+                | element is inside an 
+                code &lt;article&gt;
+                | element, it represents contact information for that article.
+              codebox
+                pre(class="brush: xml").
+                  &lt;address&gt;
+                    Written by &lt;a href="mailto:webmaster@example.com"&gt;Jon Doe&lt;/a&gt;.&lt;br&gt; 
+                    Visit us at:&lt;br&gt;
+                    Example.com&lt;br&gt;
+                    Box 564, Disneyland&lt;br&gt;
+                    USA
+                  &lt;/address&gt;
+          li
+            code.white area
+            .description(data-open="false") 
+              h3
+                code.white &lt;area&gt;
+              p The 
+              code &lt;area&gt;
+              | tag defines an area inside an image-map (an image-map is an image with clickable areas). The
+              code &lt;area&gt;
+              | element is always nested inside a
+              code &lt;map&gt;
+              | tag.
+              codebox
+                pre(class="brush: xml").
+                  &lt;img src="planets.gif" width="145" height="126" alt="Planets"
+                    usemap="#planetmap"&gt;
+
+                  &lt;map name="planetmap"&gt;
+                    &lt;area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun"&gt;
+                    &lt;area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury"&gt;
+                    &lt;area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"&gt;
+                  &lt;/map&gt;
+          li
+            code.white article
+            .description(data-open="false")
+              h3
+                code.white &lt;article&gt;
+              p The 
+                code <article>
+                | tag specifies independent, self-contained content. An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.
+              codebox
+                pre(class="brush: xml").
+                  <article>
+                  <h1>Google Chrome</h1>
+                  <p>Google Chrome is a free, open-source web browser developed by Google, released in 2008.</p>
+                </article>
+          li
+            code.white aside
+            .description(data-open="false")
+              h3
+                code.white &lt;aside&gt;
+              p The 
+                code <aside>
+                | tag defines some content aside from the content it is placed in. The aside content should be related to the surrounding content.
+              codebox
+                pre(class="brush: xml").
+                  <p>My family and I visited The Epcot center this summer.</p>
+
+                  <aside>
+                    <h4>Epcot Center</h4>
+                    <p>The Epcot Center is a theme park in Disney World, Florida.</p>
+                  </aside>
+            
+          li
+            code.white audio
+            .description(data-open="false")
+              h3
+                code.white &lt;audio&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white base
+            .description(data-open="false")
+              h3
+                code.white &lt;base&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white bdi
+            .description(data-open="false")
+              h3
+                code.white &lt;bdi&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white bdo
+            .description(data-open="false")
+              h3
+                code.white &lt;bdo&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white blockquote
+            .description(data-open="false")
+              h3
+                code.white &lt;blockquote&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white button
+            .description(data-open="false")
+              h3
+                code.white &lt;button&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white canvas
+            .description(data-open="false")
+              h3
+                code.white &lt;canvas&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white caption
+            .description(data-open="false")
+              h3
+                code.white &lt;caption&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white cite
+            .description(data-open="false")
+              h3
+                code.white &lt;cite&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white code
+            .description(data-open="false")
+              h3
+                code.white &lt;code&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white col
+            .description(data-open="false")
+              h3
+                code.white &lt;col&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white colgroup
+            .description(data-open="false")
+              h3
+                code.white &lt;colgroup&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white data
+            .description(data-open="false")
+              h3
+                code.white &lt;data&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white datalist
+            .description(data-open="false")
+              h3
+                code.white &lt;datalist&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white dd
+            .description(data-open="false")
+              h3
+                code.white &lt;dd&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white details
+            .description(data-open="false")
+              h3
+                code.white &lt;details&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white dfn
+            .description(data-open="false")
+              h3
+                code.white &lt;dfn&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white dialog
+            .description(data-open="false")
+              h3
+                code.white &lt;dialog&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white dl
+            .description(data-open="false")
+              h3
+                code.white &lt;dl&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white dt
+            .description(data-open="false")
+              h3
+                code.white &lt;dt&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white embed
+            .description(data-open="false")
+              h3
+                code.white &lt;embed&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white fieldset
+            .description(data-open="false")
+              h3
+                code.white &lt;fieldset&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white figcaption
+            .description(data-open="false")
+              h3
+                code.white &lt;figcaption&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white figure
+            .description(data-open="false")
+              h3
+                code.white &lt;figure&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white footer
+            .description(data-open="false")
+              h3
+                code.white &lt;footer&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white header
+            .description(data-open="false")
+              h3
+                code.white &lt;header&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white hr
+            .description(data-open="false")
+              h3
+                code.white &lt;hr&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white i
+            .description(data-open="false")
+              h3
+                code.white &lt;i&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white iframe
+            .description(data-open="false")
+              h3
+                code.white &lt;iframe&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white kbd
+            .description(data-open="false")
+              h3
+                code.white &lt;kbd&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white keygen
+            .description(data-open="false")
+              h3
+                code.white &lt;keygen&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white label
+            .description(data-open="false")
+              h3
+                code.white &lt;label&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white legend
+            .description(data-open="false")
+              h3
+                code.white &lt;legend&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white link
+            .description(data-open="false")
+              h3
+                code.white &lt;link&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white main
+            .description(data-open="false")
+              h3
+                code.white &lt;main&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white map
+            .description(data-open="false")
+              h3
+                code.white &lt;map&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white mark
+            .description(data-open="false")
+              h3
+                code.white &lt;mark&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white menu
+            .description(data-open="false")
+              h3
+                code.white &lt;menu&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white menuitem
+            .description(data-open="false")
+              h3
+                code.white &lt;menuitem&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white meta
+            .description(data-open="false")
+              h3
+                code.white &lt;meta&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white meter
+            .description(data-open="false")
+              h3
+                code.white &lt;meter&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white nav
+            .description(data-open="false")
+              h3
+                code.white &lt;nav&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white noscript
+            .description(data-open="false")
+              h3
+                code.white &lt;noscript&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white object
+            .description(data-open="false")
+              h3
+                code.white &lt;object&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white optgroup
+            .description(data-open="false")
+              h3
+                code.white &lt;optgroup&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white option
+            .description(data-open="false")
+              h3
+                code.white &lt;option&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white output
+            .description(data-open="false")
+              h3
+                code.white &lt;output&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white param
+            .description(data-open="false")
+              h3
+                code.white &lt;param&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white picture
+            .description(data-open="false")
+              h3
+                code.white &lt;picture&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white progress
+            .description(data-open="false")
+              h3
+                code.white &lt;progress&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white q
+            .description(data-open="false")
+              h3
+                code.white &lt;q&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white rp
+            .description(data-open="false")
+              h3
+                code.white &lt;rp&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white rt
+            .description(data-open="false")
+              h3
+                code.white &lt;rt&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white ruby
+            .description(data-open="false")
+              h3
+                code.white &lt;ruby&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white s
+            .description(data-open="false")
+              h3
+                code.white &lt;s&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white samp
+            .description(data-open="false")
+              h3
+                code.white &lt;samp&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white script
+            .description(data-open="false")
+              h3
+                code.white &lt;script&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white section
+            .description(data-open="false")
+              h3
+                code.white &lt;section&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white select
+            .description(data-open="false")
+              h3
+                code.white &lt;select&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white small
+            .description(data-open="false")
+              h3
+                code.white &lt;small&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white source
+            .description(data-open="false")
+              h3
+                code.white &lt;source&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white span
+            .description(data-open="false")
+              h3
+                code.white &lt;span&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white summary
+            .description(data-open="false")
+              h3
+                code.white &lt;summary&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white tbody
+            .description(data-open="false")
+              h3
+                code.white &lt;tbody&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white textarea
+            .description(data-open="false")
+              h3
+                code.white &lt;textarea&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white tfoot
+            .description(data-open="false")
+              h3
+                code.white &lt;tfoot&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white th
+            .description(data-open="false")
+              h3
+                code.white &lt;th&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white thead
+            .description(data-open="false")
+              h3
+                code.white &lt;thead&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white time
+            .description(data-open="false")
+              h3
+                code.white &lt;time&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white title
+            .description(data-open="false")
+              h3
+                code.white &lt;title&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white track
+            .description(data-open="false")
+              h3
+                code.white &lt;track&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white u
+            .description(data-open="false")
+              h3
+                code.white &lt;u&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white var
+            .description(data-open="false")
+              h3
+                code.white &lt;var&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white video
+            .description(data-open="false")
+              h3
+                code.white &lt;video&gt;
+              p
+              codebox
+                pre(class="brush: xml").
+                  
+            
+          li
+            code.white wbr
+            
+
+            
+           
+
             
         .nextslide
       section#2.explanation
         .previouslide
+          h2 Nachschlagewerke:
+          p.center.lgfont.lgpad
+            a(href="//w3schools.com") W3Schools
+          p.center.lgfont.lgpad
+            a(href="//developer.mozilla.org/de/docs/Web/HTML") Mozilla Developer Network
+          p.center.lgfont.lgpad
+            a(href="//wiki.selfhtml.org/wiki/HTML") Selfhtml
       
       
 

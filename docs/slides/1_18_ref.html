@@ -16,7 +16,7 @@
             <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
           </svg></a></div>
       <div class="forward"><a href="../index.html">
-          <svg viewBox="0 0 24 24" style="transform: rotate(180deg)">
+          <svg viewBox="0 0 24 24" style="transform: rotate(180deg);">
             <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
           </svg></a></div>
       <div class="sleep"><a href="../sleep.html">
@@ -27,20 +27,758 @@
     </header>
     <main>
       <section class="explanation active" id="1">
-        <h2>Nachschlagewerke:</h2>
-        <p class="center lgfont lgpad"><a href="//w3schools.com">W3Schools</a></p>
-        <p class="center lgfont lgpad"><a href="//developer.mozilla.org/de/docs/Web/HTML">Mozilla Developer Network</a></p>
-        <p class="center lgfont lgpad"><a href="//wiki.selfhtml.org/wiki/HTML">Selfhtml</a></p>
+        <h2>Heute nicht behandelte Elemente:</h2>
+        <ul class="reflisttags">
+          <li><code class="white">abbr</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;abbr&gt;</code></h3>
+              <p>Definiert eine Abkürzung oder ein Akronym Bsp: "ASAP", "MfG", "WHO"</p>
+              <p>Gibt Browsern, Suchmaschinen und Übersetzern hilfreiche Informationen</p>
+              <codebox>
+                <pre class="brush: xml">The &lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt; was founded in 1948.</pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">address</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;address&gt;</code></h3>
+              <p>The <code>&lt;address&gt;</code>tag defines the contact information for the author/owner of a document or an article. If the <code>&lt;address&gt;</code>element is inside the <code>&lt;body&gt;</code>element, it represents contact information for the document. If the <code>&lt;address&gt;</code>element is inside an <code>&lt;article&gt;</code>element, it represents contact information for that article.</p>
+              <codebox>
+                <pre class="brush: xml">&lt;address&gt;
+  Written by &lt;a href="mailto:webmaster@example.com"&gt;Jon Doe&lt;/a&gt;.&lt;br&gt; 
+  Visit us at:&lt;br&gt;
+  Example.com&lt;br&gt;
+  Box 564, Disneyland&lt;br&gt;
+  USA
+&lt;/address&gt;</pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">area</code>
+            <div class="description" data-open="false"> 
+              <h3><code class="white">&lt;area&gt;</code></h3>
+              <p>The </p><code>&lt;area&gt;</code>tag defines an area inside an image-map (an image-map is an image with clickable areas). The<code>&lt;area&gt;</code>element is always nested inside a<code>&lt;map&gt;</code>tag.
+              <codebox>
+                <pre class="brush: xml">&lt;img src="planets.gif" width="145" height="126" alt="Planets"
+  usemap="#planetmap"&gt;
+
+&lt;map name="planetmap"&gt;
+  &lt;area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun"&gt;
+  &lt;area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury"&gt;
+  &lt;area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"&gt;
+&lt;/map&gt;</pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">article</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;article&gt;</code></h3>
+              <p>The <code><article></code>tag specifies independent, self-contained content. An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.</p>
+              <codebox>
+                <pre class="brush: xml"><article>
+<h1>Google Chrome</h1>
+<p>Google Chrome is a free, open-source web browser developed by Google, released in 2008.</p></pre></article>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">aside</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;aside&gt;</code></h3>
+              <p>The <code><aside></code>tag defines some content aside from the content it is placed in. The aside content should be related to the surrounding content.</p>
+              <codebox>
+                <pre class="brush: xml"><p>My family and I visited The Epcot center this summer.</p>
+
+<aside>
+  <h4>Epcot Center</h4>
+  <p>The Epcot Center is a theme park in Disney World, Florida.</p>
+</aside>
+</pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">audio</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;audio&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">base</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;base&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">bdi</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;bdi&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">bdo</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;bdo&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">blockquote</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;blockquote&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">button</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;button&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">canvas</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;canvas&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">caption</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;caption&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">cite</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;cite&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">code</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;code&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">col</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;col&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">colgroup</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;colgroup&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">data</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;data&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">datalist</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;datalist&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">dd</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;dd&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">details</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;details&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">dfn</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;dfn&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">dialog</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;dialog&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">dl</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;dl&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">dt</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;dt&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">embed</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;embed&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">fieldset</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;fieldset&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">figcaption</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;figcaption&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">figure</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;figure&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">footer</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;footer&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">header</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;header&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">hr</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;hr&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">i</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;i&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">iframe</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;iframe&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">kbd</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;kbd&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">keygen</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;keygen&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">label</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;label&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">legend</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;legend&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">link</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;link&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">main</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;main&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">map</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;map&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">mark</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;mark&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">menu</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;menu&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">menuitem</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;menuitem&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">meta</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;meta&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">meter</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;meter&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">nav</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;nav&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">noscript</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;noscript&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">object</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;object&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">optgroup</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;optgroup&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">option</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;option&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">output</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;output&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">param</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;param&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">picture</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;picture&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">progress</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;progress&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">q</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;q&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">rp</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;rp&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">rt</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;rt&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">ruby</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;ruby&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">s</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;s&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">samp</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;samp&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">script</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;script&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">section</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;section&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">select</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;select&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">small</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;small&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">source</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;source&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">span</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;span&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">summary</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;summary&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">tbody</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;tbody&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">textarea</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;textarea&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">tfoot</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;tfoot&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">th</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;th&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">thead</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;thead&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">time</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;time&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">title</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;title&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">track</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;track&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">u</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;u&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">var</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;var&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">video</code>
+            <div class="description" data-open="false">
+              <h3><code class="white">&lt;video&gt;</code></h3>
+              <p></p>
+              <codebox>
+                <pre class="brush: xml"></pre>
+              </codebox>
+            </div>
+          </li>
+          <li><code class="white">wbr</code></li>
+        </ul>
         <div class="nextslide"></div>
       </section>
       <section class="explanation" id="2">
-        <div class="previouslide"></div>
+        <div class="previouslide">
+          <h2>Nachschlagewerke:</h2>
+          <p class="center lgfont lgpad"><a href="//w3schools.com">W3Schools</a></p>
+          <p class="center lgfont lgpad"><a href="//developer.mozilla.org/de/docs/Web/HTML">Mozilla Developer Network</a></p>
+          <p class="center lgfont lgpad"><a href="//wiki.selfhtml.org/wiki/HTML">Selfhtml</a></p>
+        </div>
       </section>
     </main>
   </body>
   <footer>
     <p>KaraBeNemsi @ 2017</p>
-    <p>Build LB117C0</p>
+    <p>Build NB117D1</p>
   </footer>
   <script src="../assets/js/script.min.js" charset="utf-8"></script>
   <script>

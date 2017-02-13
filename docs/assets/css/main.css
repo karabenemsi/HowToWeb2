@@ -1693,6 +1693,64 @@ blockquote p.origin::before {
   background: #353a45;
 }
 
+kbd {
+  display: inline-block;
+  box-shadow: 0 0 0.5rem rgba(30, 30, 30, 0.3);
+  border-radius: 0.3rem;
+  padding: 0 .5em;
+  background: rgba(221, 221, 221, 0.1);
+}
+
+.reflisttags {
+  list-style: none;
+  -webkit-columns: 6;
+  -moz-columns: 6;
+  columns: 6;
+  max-height: 80%;
+}
+
+.reflisttags li {
+  position: relative;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.reflisttags li:first-of-type {
+  margin: 1rem 0;
+}
+
+.reflisttags li .description {
+  position: fixed;
+  top: 50%;
+  left: calc(50% + 2.5rem);
+  background: #fff;
+  box-shadow: 0 0 1rem rgba(30, 30, 30, 0.3);
+  display: none;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 500;
+  padding: 2rem;
+}
+
+.reflisttags li .description h3 code {
+  font-size: 3rem;
+}
+
+.reflisttags li .description p {
+  line-height: 1.6;
+}
+
+.reflisttags li .description[data-open="false"] {
+  display: none;
+}
+
+.reflisttags li .description[data-open="true"] {
+  display: block;
+}
+
 .indexpage main {
   width: 100vw;
   height: 100vh;
