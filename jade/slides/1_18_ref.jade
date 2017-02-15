@@ -126,9 +126,22 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;bdi&gt;
-              p
+              p BDI steht für
+								b B
+								| i-
+								b D
+								| irectional 
+								b I
+								| solation. Der
+								code &lt;bdi&gt;
+								| tag isoliert einen Teil eines Textes der bei der Änderung der Textrichtung anders formattiert wird. Seine Textrichtung wird beibehalten
               codebox
                 pre(class="brush: xml").
+									<ul>
+								    <li>User <bdi>hrefs</bdi>: 60 points</li>
+								    <li>User <bdi>jdoe</bdi>: 80 points</li>
+								    <li>User <bdi>????</bdi>: 90 points</li>
+									</ul>
                   
             
           li
@@ -136,9 +149,18 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;bdo&gt;
-              p
+              p BDO steht für 
+								b B
+								| i-
+								b D
+								| irectional 
+								b O
+								| verwrite. Damit wird die die aktuelle Textrichtung überschrieben
               codebox
                 pre(class="brush: xml").
+									<bdo dir="rtl">
+										This text will go right-to-left.
+									</bdo> 
                   
             
           li
@@ -146,9 +168,12 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;blockquote&gt;
-              p
+              p Ein Abschnitt, von einer anderen Quelle zitiert wird.
               codebox
                 pre(class="brush: xml").
+									<blockquote>
+										Niemand hat vor eine Mauer zu bauen - Bob der Baumeister
+									</blockquote>
                   
             
           li
@@ -156,9 +181,12 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;button&gt;
-              p
+              p Definiert einen klickbaren Knopf. Er unterscheidet sich von einem Knopf aus einem 
+								code &lt;input&gt;
+								| -Element dadurch, dass hier auch Texte oder Bilder eingefügt werden können.
               codebox
                 pre(class="brush: xml").
+									<button type="button">Click Me!</button>
                   
             
           li
@@ -166,9 +194,17 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;canvas&gt;
-              p
+              p Auf einem Canvas kann live gemalt werden. Dies geschieht per JavaScript.
               codebox
                 pre(class="brush: xml").
+									<canvas id="myCanvas"></canvas>
+
+									<script>
+										var canvas = document.getElementById("myCanvas");
+										var ctx = canvas.getContext("2d");
+										ctx.fillStyle = "#FF0000";
+										ctx.fillRect(0, 0, 80, 80);
+									 </script> 
                   
             
           li
@@ -176,9 +212,20 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;caption&gt;
-              p
+              p Definiert eine Bezeichnung für eine Tabelle.
               codebox
                 pre(class="brush: xml").
+									<table>
+								    <caption>Monthly savings</caption>
+								    <tr>
+								      <th>Month</th>
+								      <th>Savings</th>
+								    </tr>
+								    <tr>
+								      <td>January</td>
+				   				    <td>$100</td>
+			  					   </tr>
+									</table> 
                   
             
           li
@@ -186,41 +233,22 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;cite&gt;
-              p
+              p Definiert den Namen/Titel eines Werks (z.B. Ein Bild, ein Lied ...)
               codebox
                 pre(class="brush: xml").
-                  
+									<p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p> 
             
           li
             code.white code
             .description(data-open="false")
               h3
                 code.white &lt;code&gt;
-              p
+              p Enthält Computercode
               codebox
                 pre(class="brush: xml").
-                  
-            
-          li
-            code.white col
-            .description(data-open="false")
-              h3
-                code.white &lt;col&gt;
-              p
-              codebox
-                pre(class="brush: xml").
-                  
-            
-          li
-            code.white colgroup
-            .description(data-open="false")
-              h3
-                code.white &lt;colgroup&gt;
-              p
-              codebox
-                pre(class="brush: xml").
-                  
-            
+                  <code>&lt;code&gt;</code>
+                
+           
           li
             code.white data
             .description(data-open="false")
