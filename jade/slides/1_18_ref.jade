@@ -254,39 +254,65 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;data&gt;
-              p
+              p The <data> tag links the given content with a machine-readable translation. This element provides both a machine-readable value for data processors, and a human-readable value for rendering in a browser.
+
               codebox
                 pre(class="brush: xml").
-                  
+                  <ul>
+									  <li><data value="21053">Cherry Tomato</data></li>
+									  <li><data value="21054">Beef Tomato</data></li>
+									  <li><data value="21055">Snack Tomato</data></li>
+									</ul> 
             
           li
             code.white datalist
             .description(data-open="false")
               h3
                 code.white &lt;datalist&gt;
-              p
+              p The <datalist> tag specifies a list of pre-defined options for an <input> element. The <datalist> tag is used to provide an "autocomplete" feature on <input> elements. Users will see a drop-down list of pre-defined options as they input data. Use the <input> element's list attribute to bind it together with a <datalist> element.
+
               codebox
                 pre(class="brush: xml").
-                  
-            
+                  <input list="browsers">
+
+									<datalist id="browsers">
+									   <option value="Internet Explorer">
+									   <option value="Firefox">
+									   <option value="Chrome">
+									   <option value="Opera">
+									   <option value="Safari">
+									</datalist> 
+									            
           li
             code.white dd
             .description(data-open="false")
               h3
                 code.white &lt;dd&gt;
-              p
+              p The <dd> tag is used to describe a term/name in a description list. The <dd> tag is used in conjunction with <dl> (defines a description list) and <dt> (defines terms/names). Inside a <dd> tag you can put paragraphs, line breaks, images, links, lists, etc.
+
               codebox
                 pre(class="brush: xml").
-                  
+                  <dl>
+									  <dt>Coffee</dt>
+									  <dd>Black hot drink</dd>
+									  <dt>Milk</dt>
+									  <dd>White cold drink</dd>
+									</dl> 
             
           li
             code.white details
             .description(data-open="false")
               h3
                 code.white &lt;details&gt;
-              p
+              p The <details> tag specifies additional details that the user can view or hide on demand. The <details> tag can be used to create an interactive widget that the user can open and close. Any sort of content can be put inside the <details> tag. The content of a <details> element should not be visible unless the open attribute is set.
+
               codebox
                 pre(class="brush: xml").
+									<details>
+									  <summary>Copyright 1999-2014.</summary>
+									  <p> - by Refsnes Data. All Rights Reserved.</p>
+									  <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+									</details> 
                   
             
           li
@@ -294,59 +320,81 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;dfn&gt;
-              p
+              p The <dfn> tag represents the defining instance of a term in HTML. The defining instance is often the first use of a term in a document. The nearest parent of the <dfn> tag must also contain the definition/explanation for the term inside <dfn>.
+
               codebox
                 pre(class="brush: xml").
-                  
+                  <p><dfn>HTML</dfn> is the standard markup language for creating web pages.</p>
             
           li
             code.white dialog
             .description(data-open="false")
               h3
                 code.white &lt;dialog&gt;
-              p
+              p The <dialog> tag defines a dialog box or window. The <dialog> element makes it easy to create popup dialogs and modals on a web page.
+
               codebox
                 pre(class="brush: xml").
-                  
-            
-          li
-            code.white dl
-            .description(data-open="false")
-              h3
-                code.white &lt;dl&gt;
-              p
-              codebox
-                pre(class="brush: xml").
-                  
+                  <th>January <dialog open>This is an open dialog window</dialog></th>
             
           li
             code.white dt
             .description(data-open="false")
               h3
                 code.white &lt;dt&gt;
-              p
+              p The <dt> tag defines a term/name in a description list. The <dt> tag is used in conjunction with <dl> (defines a description list) and <dd> (describes each term/name).
+
               codebox
                 pre(class="brush: xml").
-                  
+									<dl>
+								    <dt>Coffee</dt>
+								    <dd>Black hot drink</dd>
+								    <dt>Milk</dt>
+								    <dd>White cold drink</dd>
+									</dl>   
             
+          li
+            code.white dl
+            .description(data-open="false")
+              h3
+                code.white &lt;dl&gt;
+              p The <dl> tag defines a description list. The <dl> tag is used in conjunction with <dt> (defines terms/names) and <dd> (describes each term/name).
+
+              codebox
+                pre(class="brush: xml").
+                  <dl>
+								    <dt>Coffee</dt>
+								    <dd>Black hot drink</dd>
+								    <dt>Milk</dt>
+								    <dd>White cold drink</dd>
+									</dl> 
+								            
           li
             code.white embed
             .description(data-open="false")
               h3
                 code.white &lt;embed&gt;
-              p
+              p Definiert einen Container für eine externe Anwendung oder interaktiven Inhalt.
               codebox
                 pre(class="brush: xml").
-                  
+                  <embed src="helloworld.swf"> 
             
           li
             code.white fieldset
             .description(data-open="false")
               h3
                 code.white &lt;fieldset&gt;
-              p
+              p Wird benutzt um zueinander gehörende Elemente in einem Formular zu gruppieren
               codebox
                 pre(class="brush: xml").
+									<form>
+								    <fieldset>
+								      <legend>Personalia:</legend>
+								      Name: <input type="text"><br>
+								      Email: <input type="text"><br>
+								      Date of birth: <input type="text">
+								    </fieldset>
+									</form> 
                   
             
           li
@@ -354,9 +402,14 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;figcaption&gt;
-              p
+              p The <figcaption> tag defines a caption for a <figure> element. The <figcaption> element can be placed as the first or last child of the <figure> element.
+
               codebox
                 pre(class="brush: xml").
+									<figure>
+								    <img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
+								    <figcaption>Fig1. - A view of the pulpit rock in Norway.</figcaption>
+									</figure> 
                   
             
           li
@@ -364,19 +417,26 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;figure&gt;
-              p
+              p Das <figure> -Tag legt in sich geschlossene Inhalte wie Illustrationen, Diagramme, Fotos, Codelisten usw. fest. Während der Inhalt des <figure> -Elements mit dem Hauptfluss zusammenhängt, ist seine Position unabhängig vom Hauptfluss, und wenn es entfernt wird, sollte dies den Fluss des Dokuments nicht beeinflussen.
               codebox
                 pre(class="brush: xml").
-                  
+                  <figure>
+										<img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
+									</figure> 
             
           li
             code.white footer
             .description(data-open="false")
               h3
                 code.white &lt;footer&gt;
-              p
+              p Definiert eine Fußzeile für eine Dokument oder einen Abschnitt und enthält weiterführende Informationen
               codebox
                 pre(class="brush: xml").
+									<footer>
+									  <p>Posted by: Hege Refsnes</p>
+									  <p>Contact information: <a href="mailto:someone@example.com">
+											someone@example.com</a>.</p>
+									</footer> 
                   
             
           li
@@ -384,9 +444,17 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;header&gt;
-              p
+              p Das header-Element ist ein Container für einleitenden Inhalt oder Navigationslinks
               codebox
                 pre(class="brush: xml").
+									<article>
+								    <header>
+								      <h1>Most important heading here</h1>
+								      <h3>Less important heading here</h3>
+								      <p>Some additional information here</p>
+								    </header>
+								    <p>Lorem Ipsum dolor set amet....</p>
+									</article> 
                   
             
           li
@@ -394,19 +462,16 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;hr&gt;
-              p
+              p Definiert einen Themenwechsel in einer Seite.
               codebox
                 pre(class="brush: xml").
-                  
-            
-          li
-            code.white i
-            .description(data-open="false")
-              h3
-                code.white &lt;i&gt;
-              p
-              codebox
-                pre(class="brush: xml").
+									<h1>HTML</h1>
+										<p>HTML is a language for describing web pages.....</p>
+
+										<hr>
+
+										<h1>CSS</h1>
+									<p>CSS defines how to display HTML elements.....</p> 
                   
             
           li
@@ -414,19 +479,20 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;iframe&gt;
-              p
+              p Ein Inline-Frame. Hier wird ein anderes Dokument eingebunden.
               codebox
                 pre(class="brush: xml").
-                  
+                  <iframe src="https://www.w3schools.com"></iframe>
             
           li
             code.white kbd
             .description(data-open="false")
               h3
                 code.white &lt;kbd&gt;
-              p
+              p Tastatureingabe
               codebox
                 pre(class="brush: xml").
+								  <kbd>Leertaste</kbd> 
                   
             
           li
@@ -444,9 +510,14 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;label&gt;
-              p
+              p Ein Schlüsselpaargenerator für Formulare
               codebox
                 pre(class="brush: xml").
+									<form action="/action_page.php" method="get">
+								    Username: <input type="text" name="usr_name">
+								    Encryption: <keygen name="security">
+								    <input type="submit">
+									</form>
                   
             
           li
