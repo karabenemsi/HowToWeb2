@@ -28,17 +28,9 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;address&gt;
-              p The 
-                code &lt;address&gt;
-                | tag defines the contact information for the author/owner of a document or an article. If the 
-                code &lt;address&gt;
-                | element is inside the 
-                code &lt;body&gt;
-                | element, it represents contact information for the document. If the 
-                code &lt;address&gt;
-                | element is inside an 
-                code &lt;article&gt;
-                | element, it represents contact information for that article.
+              p Definiert die Kontaktinformationen für den Artikel/die Seite. Im 
+                code.white &lt;article&gt;
+                | angegeben definiert er die Informationen für den Artikel, sonst für die Seite.
               codebox
                 pre(class="brush: xml").
                   &lt;address&gt;
@@ -53,13 +45,9 @@ html(lang='de')
             .description(data-open="false") 
               h3
                 code.white &lt;area&gt;
-              p The 
-              code &lt;area&gt;
-              | tag defines an area inside an image-map (an image-map is an image with clickable areas). The
-              code &lt;area&gt;
-              | element is always nested inside a
-              code &lt;map&gt;
-              | tag.
+              p Beschreibt einen Bereich in einer image-map das Element ist immer in einer 
+                code &lt;map&gt; 
+                | verschachtelt.
               codebox
                 pre(class="brush: xml").
                   &lt;img src="planets.gif" width="145" height="126" alt="Planets"
@@ -75,23 +63,23 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;article&gt;
-              p The 
+              p Der 
                 code <article>
-                | tag specifies independent, self-contained content. An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.
+                | tag spezifiziert unabhängingen, selbstständigen Inhalt. Ein  Artikel sollte ohne Zusätze Sinn ergeben und es sollte moglich sein ihn vom Rest der Seite trennnen zu können.
               codebox
                 pre(class="brush: xml").
                   <article>
-                  <h1>Google Chrome</h1>
-                  <p>Google Chrome is a free, open-source web browser developed by Google, released in 2008.</p>
-                </article>
+                    <h1>Google Chrome</h1>
+                    <p>Google Chrome is a free, open-source web browser developed by Google, released in 2008.</p>
+                  </article>
           li
             code.white aside
             .description(data-open="false")
               h3
                 code.white &lt;aside&gt;
-              p The 
+              p Der 
                 code <aside>
-                | tag defines some content aside from the content it is placed in. The aside content should be related to the surrounding content.
+                | tag definiert Inhalt abseits von dem ihn enthaltenen Umfeld. Er sollte inhaltlich zur Umgebung passen.
               codebox
                 pre(class="brush: xml").
                   <p>My family and I visited The Epcot center this summer.</p>
@@ -106,9 +94,14 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;audio&gt;
-              p
+              p Definiert Ton so wie Musik oder andere Audiostreams
               codebox
                 pre(class="brush: xml").
+                  <audio controls>
+                    <source src="horse.ogg" type="audio/ogg">
+                    <source src="horse.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                  </audio> 
                   
             
           li
@@ -116,10 +109,17 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;base&gt;
-              p
+              p Definiert eine Standarturl und ein Standarttarget für alle Links auf der Seite
               codebox
                 pre(class="brush: xml").
-                  
+                  <head>
+                    <base href="https://www.w3schools.com/images/" target="_blank">
+                  </head>
+
+                  <body>
+                    <img src="stickman.gif" width="24" height="39" alt="Stickman">
+                    <a href="https://www.w3schools.com">W3Schools</a>
+                  </body> 
             
           li
             code.white bdi
