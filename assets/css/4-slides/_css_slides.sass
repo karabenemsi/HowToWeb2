@@ -1,9 +1,82 @@
 //## Colors
 
 .cssslides
+  .bg_blue
+    background: $c_theme_base
+  .bg_red
+    background: $c_theme_altaccent
+  .bg_yellow
+    background: $c_theme_accent
+  .bg_blue2
+    background: $c_theme_bg_2
   .colordemo1
     display: inline-block
     height: 2em
     width: 2em
     border-radius: 50%
     float: right
+  .demodiv
+    height: 8rem
+    width: 80%
+    margin: 1rem auto
+    p
+      margin: 0
+      text-align: center
+      font-size: 2rem
+  .sdemodiv
+    height: 4rem
+    width: 10%
+    margin: 1rem auto
+  .halfddiv
+    box-sizing: border-box
+    height: 60%
+    width: 45%
+    float: left
+    margin: 3rem 0
+  img.fullscreen
+    display: block
+    margin: 0 auto
+    width: 60%
+  img.centerimg
+    display: block
+    margin: 0.5rem auto
+    height: auto
+    width: auto
+  .prefix
+    font-family: 'Roboto Sans', monospace
+    font-weight: 300
+    letter-spacing: 0.1rem
+  .shadowdemo1
+    .calendar
+      display: flex
+      justify-content: space-between
+      padding: 0 10%
+      .day
+        border-radius: 1rem
+        display: inline-block
+        box-shadow: 0 0 1rem rgba(30,30,30,0.6)
+        height: 30rem
+        width: 20rem
+        background: #efefef
+        h2
+          border-radius: 1rem 1rem 0 0
+          width: 20rem
+          margin: 0
+          text-align: center
+          font-size: 12rem
+          padding: 4rem 0
+          color: white
+          text-shadow: 0 0 2rem rgba(0,0,0,0.6)
+          box-shadow: inset 0 0 4rem rgba(250,250,250,0.1)
+        p
+          width: 100%
+          height: 10rem
+          text-align: center
+          font-size: 2rem
+          line-height: 2
+      &.calNoShadow
+        .day
+          box-shadow: none
+          h2
+            box-shadow: none
+            text-shadow: none

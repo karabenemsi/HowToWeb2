@@ -10,89 +10,225 @@ $themcolordecent : #1C72A3
   box-sizing: border-box
 ::root
   font-size: 15px
-header
-  background: $themcoloraccent
-  margin: 0
-  padding: 0
-  width: 100%
-  height: 4rem
-  box-shadow: 0 0.25rem 0.5rem 0 rgba(60,60,60,0.3)
-  &::after
-    content: ' '
-    display: table
-    clear: both
-  .container
-    max-width: 800px
-    margin: 0 auto
-  .logo
-    padding: 0.5rem
-    float: left
-    h1
-      font-size: 3rem
-      margin: 0
-      padding: 0
-      color: $themcolorbright
-      font-weight: 300
-      text-transform: uppercase
-      letter-spacing: -5px
-      line-height: 1
-      font-family: 'Roboto Slab', serif
-      &::first-letter
-        font-weight: 600
-    img
-      height: 3rem
-      width: 3rem
-  nav
-    float: right
-    ul
-      list-style: none
-      margin: 0
-      padding: 0
-    li
+.rightpart
+  float: right
+  width: 50%
+  *
+    border: 2px solid black
+    padding: 1rem
+    margin: 2px
+    position: relative
+    &::before
+      content: ' '
+      position: absolute
+      top: 0
+      left: 0
+      font-size: 1rem
+      line-height: 1rem
+      font-family: 'Roboto Sans', monospace
+      font-weight: 700
+      color: #000
+  header
+    background: $themcoloraccent
+    width: calc(100% - 4px)
+    height: auto
+    box-shadow: 0 0.25rem 0.5rem 0 rgba(60,60,60,0.3)
+    &::before
+      content: 'header'
+    &::after
+      content: ' '
+      display: table
+      clear: both
+    .container
+      max-width: 800px
+      margin: 0 auto
+      height: 12rem
+      &::before
+        content: '.container'
+    .logo
       float: left
-      display: inline-block
-      padding: 0
-      margin: 0
-      a
-        display: block
-        font-size: 1rem
-        text-transform: uppercase
-        text-decoration: none
-        line-height: 1
-        padding: 1.5rem 1.3rem
+      &::before
+        content: '.logo'
+      h1
+        font-size: 3rem
         margin: 0
         color: $themcolorbright
-        transition: all 0.5s ease-in-out
-        &:hover
-          color: #fff
-          background: $themcolordecent
-          cursor: pointer
+        font-weight: 300
+        text-transform: uppercase
+        letter-spacing: -5px
+        line-height: 1
+        font-family: 'Roboto Slab', serif
+        &::before
+          content: 'h1'
+          letter-spacing: 0
+          text-transform: none
+        &::first-letter
+          font-weight: 600
+      img
+        height: 3rem
+        width: 3rem
+        &::before
+          content: 'img'
+    nav
+      float: right
+      &::before
+        content: 'nav'
+      ul
+        &::before
+          content: 'ul'
+        list-style: none
+        margin: 0
+        height: 7.5rem
+      li
+        &::before
+          content: 'li'
+        float: left
+        display: inline-block
+        margin: 0
+        a
+          &::before
+            content: 'a'
+            text-transform: none
+          display: block
+          font-size: 1rem
+          text-transform: uppercase
+          text-decoration: none
+          line-height: 1
+          margin: 0
+          color: $themcolorbright
+          transition: all 0.5s ease-in-out
+          &:hover
+            color: #fff
+            background: $themcolordecent
+            cursor: pointer
 
-.heroimage
-  width: 100%
-  height: 20rem
-  background-image: url(../../assets/img/big/img_b_018.jpg)
-  background-size: cover
-  background-position: center center
+  .heroimage
+    &::before
+      content: '.heroimage'
+    width: calc(100% - 4px)
+    height: 20rem
+    background-image: url(../../assets/img/big/img_b_018.jpg)
+    background-size: cover
+    background-position: center center
 
-main
-  padding: 4rem 1rem 0
-  font-family: 'Open Sans', sans-serif
-  color: $themcolordark
-  p
-    line-height: 2
-    font-size: 1.2rem
-  h1
-    font-size: 3rem
-    font-weight: 300
-    text-transform: uppercase
-    margin: 0 0 2rem
-    padding: 0 0 0 1rem
-    line-height: 1
-    border-left: 2px solid $themcolordark
-  section
-    max-width: 800px
-    margin: 2rem auto
-  img
+  main
+    &::before
+      content: 'main'
+    padding: 4rem 1rem 0
+    font-family: 'Open Sans', sans-serif
+    color: $themcolordark
+    p
+      &::before
+        content: 'p'
+      line-height: 2
+      font-size: 1.2rem
+    h1
+      &::before
+        content: 'h1'
+      font-size: 3rem
+      font-weight: 300
+      text-transform: uppercase
+      margin: 0 0 2rem
+      padding: 0 0 0 1rem
+      line-height: 1
+      border-left: 2px solid $themcolordark
+    section
+      &::before
+        content: 'section'
+      max-width: 800px
+      margin: 2rem auto
+    img
+      &::before
+        content: 'img'
+      width: 100%
+      margin: 2rem 0
+
+.leftpart
+  width: 50%
+  float: left
+  header
+    background: $themcoloraccent
+    margin: 0
+    padding: 0
     width: 100%
-    margin: 2rem 0
+    height: 4rem
+    box-shadow: 0 0.25rem 0.5rem 0 rgba(60,60,60,0.3)
+    &::after
+      content: ' '
+      display: table
+      clear: both
+    .container
+      max-width: 800px
+      margin: 0 auto
+    .logo
+      padding: 0.5rem
+      float: left
+      h1
+        font-size: 3rem
+        margin: 0
+        padding: 0
+        color: $themcolorbright
+        font-weight: 300
+        text-transform: uppercase
+        letter-spacing: -5px
+        line-height: 1
+        font-family: 'Roboto Slab', serif
+        &::first-letter
+          font-weight: 600
+      img
+        height: 3rem
+        width: 3rem
+    nav
+      float: right
+      ul
+        list-style: none
+        margin: 0
+        padding: 0
+      li
+        float: left
+        display: inline-block
+        padding: 0
+        margin: 0
+        a
+          display: block
+          font-size: 1rem
+          text-transform: uppercase
+          text-decoration: none
+          line-height: 1
+          padding: 1.5rem 1.3rem
+          margin: 0
+          color: $themcolorbright
+          transition: all 0.5s ease-in-out
+          &:hover
+            color: #fff
+            background: $themcolordecent
+            cursor: pointer
+
+  .heroimage
+    width: 100%
+    height: 20rem
+    background-image: url(../../assets/img/big/img_b_018.jpg)
+    background-size: cover
+    background-position: center center
+
+  main
+    padding: 4rem 1rem 0
+    font-family: 'Open Sans', sans-serif
+    color: $themcolordark
+    p
+      line-height: 2
+      font-size: 1.2rem
+    h1
+      font-size: 3rem
+      font-weight: 300
+      text-transform: uppercase
+      margin: 0 0 2rem
+      padding: 0 0 0 1rem
+      line-height: 1
+      border-left: 2px solid $themcolordark
+    section
+      max-width: 800px
+      margin: 2rem auto
+    img
+      width: 100%
+      margin: 2rem 0

@@ -11,10 +11,22 @@ html(lang='de')
     include ../master/header.jade
     main
       section#1.explanation.active
-
+        a.small(href="http://codepen.io/carolineartz/full/ogVXZj/", target="_blank") Codepen by carolineartz
+        img.fullscreen(src="https://karabenemsi.github.io/HowtoWeb/assets/img/boxmodell.png", alt="Boxmodell")
         .nextslide
       section#2.explanation
         .previouslide
+        .codebox
+          pre(class="brush: css").
+            #1 {
+              width: 120px;
+              height: 60px;
+              padding: 10px;
+              border: 10px dashed navy;
+              margin: 8px;
+            }
+        img.centerimg(src="https://karabenemsi.github.io/HowtoWeb/assets/img/boxmodell.png", alt="Boxmodell", style="height:25rem")
+
 
 
   include ../master/footer.jade

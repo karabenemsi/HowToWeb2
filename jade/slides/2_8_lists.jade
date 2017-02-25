@@ -11,10 +11,17 @@ html(lang='de')
     include ../master/header.jade
     main
       section#1.explanation.active
-
-        .nextslide
-      section#2.explanation
-        .previouslide
-
+        h2 Listen
+        .codebox
+          pre(class="brush: css").
+            ol {
+              list-style-type: decimal; /* lower-alpha | numeric |
+                     armenian | georgian | ... */
+              list-style-image: url("list.png");
+              list-style-position: outside; /* inside */
+            }
+            ul {
+              list-style: square inside;
+            }
 
   include ../master/footer.jade

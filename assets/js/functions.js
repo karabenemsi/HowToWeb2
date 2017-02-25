@@ -90,4 +90,9 @@ $( document ).ready(function() {
     return number;
   }
 
+  // CSS Examples
+  $('.calendar').click(function(){
+    $(this).toggleClass('calNoShadow');
+  });
+
 });

@@ -16,7 +16,7 @@ $headerheight: 80px
     width: 50%
     height: 100%
     // display: flex
-    // justify-content: center
+    // justifyd-content: center
     // align-items: center
     flex-direction: column
     transition: all 0.5s ease-in-out
@@ -68,7 +68,8 @@ $headerheight: 80px
       li
         border-left: 1px solid $c_theme_light
         margin: 0
-        padding: 0.5rem 0
+        padding: 0
+        height: 3rem
         line-height: 1
         min-width: 50%
         width: 50%
@@ -81,9 +82,11 @@ $headerheight: 80px
         a
           padding: 0 1.3rem
           display: block
+          line-height: 2.3
           opacity: 0
+          width: 100%
           transform-origin: left center
-          animation: index_listopen_a 0.7s 1.2s forwards
+          animation: index_listopen_a 0.7s 1.5s forwards
           color: inherit
 
     p
@@ -146,20 +149,21 @@ $headerheight: 80px
     opacity: 0
     transform: scaleX(0)
     padding: 0 0
-  5%
+  85%
     opacity: 1
   100%
     opacity: 1
-    padding: 0 1.3rem
+    // padding: 1rem 1.3rem
 @keyframes index_listopen_li
   0%
     opacity: 0
     height: 0
-  5%
+  85%
     opacity: 1
+    height: 3rem
   100%
     opacity: 1
-    height: 1.4rem
+    // height: 1.4rem
 
 
 @keyframes index_listopen_content

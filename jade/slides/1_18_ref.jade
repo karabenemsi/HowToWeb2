@@ -64,30 +64,30 @@ html(lang='de')
               h3
                 code.white &lt;article&gt;
               p Der 
-                code <article>
+                code &lt;article&gt;
                 | tag spezifiziert unabhängingen, selbstständigen Inhalt. Ein  Artikel sollte ohne Zusätze Sinn ergeben und es sollte moglich sein ihn vom Rest der Seite trennnen zu können.
               codebox
                 pre(class="brush: xml").
-                  <article>
-                    <h1>Google Chrome</h1>
-                    <p>Google Chrome is a free, open-source web browser developed by Google, released in 2008.</p>
-                  </article>
+                  &lt;article&gt;
+                    &lt;h1&gt;Google Chrome&lt;/h1&gt;
+                    &lt;p&gt;Google Chrome is a free, open-source web browser developed by Google.&lt;/p&gt;
+                  &lt;/article&gt;
           li
             code.white aside
             .description(data-open="false")
               h3
                 code.white &lt;aside&gt;
               p Der 
-                code <aside>
+                code &lt;aside&gt;
                 | tag definiert Inhalt abseits von dem ihn enthaltenen Umfeld. Er sollte inhaltlich zur Umgebung passen.
               codebox
                 pre(class="brush: xml").
-                  <p>My family and I visited The Epcot center this summer.</p>
+                  &lt;p&gt;My family and I visited The Epcot center this summer.&lt;/p&gt;
 
-                  <aside>
-                    <h4>Epcot Center</h4>
-                    <p>The Epcot Center is a theme park in Disney World, Florida.</p>
-                  </aside>
+                  &lt;aside&gt;
+                    &lt;h4&gt;Epcot Center&lt;/h4&gt;
+                    &lt;p&gt;The Epcot Center is a theme park in Disney World, Florida.&lt;/p&gt;
+                  &lt;/aside&gt;
             
           li
             code.white audio
@@ -97,11 +97,11 @@ html(lang='de')
               p Definiert Ton so wie Musik oder andere Audiostreams
               codebox
                 pre(class="brush: xml").
-                  <audio controls>
-                    <source src="horse.ogg" type="audio/ogg">
-                    <source src="horse.mp3" type="audio/mpeg">
+                  &lt;audio controls&gt;
+                    &lt;source src="horse.ogg" type="audio/ogg"&gt;
+                    &lt;source src="horse.mp3" type="audio/mpeg"&gt;
                     Your browser does not support the audio tag.
-                  </audio> 
+                  &lt;/audio&gt; 
                   
             
           li
@@ -112,14 +112,14 @@ html(lang='de')
               p Definiert eine Standarturl und ein Standarttarget für alle Links auf der Seite
               codebox
                 pre(class="brush: xml").
-                  <head>
-                    <base href="https://www.w3schools.com/images/" target="_blank">
-                  </head>
+                  &lt;head&gt;
+                    &lt;base href="https://www.w3schools.com/images/" target="_blank"&gt;
+                  &lt;/head&gt;
 
-                  <body>
-                    <img src="stickman.gif" width="24" height="39" alt="Stickman">
-                    <a href="https://www.w3schools.com">W3Schools</a>
-                  </body> 
+                  &lt;body&gt;
+                    &lt;img src="stickman.gif" width="24" height="39" alt="Stickman"&gt;
+                    &lt;a href="https://www.w3schools.com"&gt;W3Schools&lt;/a&gt;
+                  &lt;/body&gt; 
             
           li
             code.white bdi
@@ -127,21 +127,21 @@ html(lang='de')
               h3
                 code.white &lt;bdi&gt;
               p BDI steht für
-								b B
-								| i-
-								b D
-								| irectional 
-								b I
-								| solation. Der
-								code &lt;bdi&gt;
-								| tag isoliert einen Teil eines Textes der bei der Änderung der Textrichtung anders formattiert wird. Seine Textrichtung wird beibehalten
+                b B
+                | i-
+                b D
+                | irectional 
+                b I
+                | solation. Der
+                code &lt;bdi&gt;
+                | tag isoliert einen Teil eines Textes der bei der Änderung der Textrichtung anders formattiert wird. Seine Textrichtung wird beibehalten
               codebox
                 pre(class="brush: xml").
-									<ul>
-								    <li>User <bdi>hrefs</bdi>: 60 points</li>
-								    <li>User <bdi>jdoe</bdi>: 80 points</li>
-								    <li>User <bdi>????</bdi>: 90 points</li>
-									</ul>
+                  &lt;ul&gt;
+                    &lt;li&gt;User &lt;bdi&gt;hrefs&lt;/bdi&gt;: 60 points&lt;/li&gt;
+                    &lt;li&gt;User &lt;bdi&gt;jdoe&lt;/bdi&gt;: 80 points&lt;/li&gt;
+                    &lt;li&gt;User &lt;bdi&gt;????&lt;/bdi&gt;: 90 points&lt;/li&gt;
+                  &lt;/ul&gt;
                   
             
           li
@@ -150,17 +150,17 @@ html(lang='de')
               h3
                 code.white &lt;bdo&gt;
               p BDO steht für 
-								b B
-								| i-
-								b D
-								| irectional 
-								b O
-								| verwrite. Damit wird die die aktuelle Textrichtung überschrieben
+                b B
+                | i-
+                b D
+                | irectional 
+                b O
+                | verwrite. Damit wird die die aktuelle Textrichtung überschrieben
               codebox
                 pre(class="brush: xml").
-									<bdo dir="rtl">
-										This text will go right-to-left.
-									</bdo> 
+                  &lt;bdo dir="rtl"&gt;
+                    This text will go right-to-left.
+                  &lt;/bdo&gt; 
                   
             
           li
@@ -171,9 +171,9 @@ html(lang='de')
               p Ein Abschnitt, von einer anderen Quelle zitiert wird.
               codebox
                 pre(class="brush: xml").
-									<blockquote>
-										Niemand hat vor eine Mauer zu bauen - Bob der Baumeister
-									</blockquote>
+                  &lt;blockquote&gt;
+                    Niemand hat vor eine Mauer zu bauen - Bob der Baumeister
+                  &lt;/blockquote&gt;
                   
             
           li
@@ -182,11 +182,11 @@ html(lang='de')
               h3
                 code.white &lt;button&gt;
               p Definiert einen klickbaren Knopf. Er unterscheidet sich von einem Knopf aus einem 
-								code &lt;input&gt;
-								| -Element dadurch, dass hier auch Texte oder Bilder eingefügt werden können.
+                code &lt;input&gt;
+                | -Element dadurch, dass hier auch Texte oder Bilder eingefügt werden können.
               codebox
                 pre(class="brush: xml").
-									<button type="button">Click Me!</button>
+                  &lt;button type="button"&gt;Click Me!&lt;/button&gt;
                   
             
           li
@@ -197,14 +197,14 @@ html(lang='de')
               p Auf einem Canvas kann live gemalt werden. Dies geschieht per JavaScript.
               codebox
                 pre(class="brush: xml").
-									<canvas id="myCanvas"></canvas>
+                  &lt;canvas id="myCanvas"&gt;&lt;/canvas&gt;
 
-									<script>
-										var canvas = document.getElementById("myCanvas");
-										var ctx = canvas.getContext("2d");
-										ctx.fillStyle = "#FF0000";
-										ctx.fillRect(0, 0, 80, 80);
-									 </script> 
+                  &lt;script&gt;
+                    var canvas = document.getElementById("myCanvas");
+                    var ctx = canvas.getContext("2d");
+                    ctx.fillStyle = "#FF0000";
+                    ctx.fillRect(0, 0, 80, 80);
+                   &lt;/script&gt; 
                   
             
           li
@@ -215,17 +215,17 @@ html(lang='de')
               p Definiert eine Bezeichnung für eine Tabelle.
               codebox
                 pre(class="brush: xml").
-									<table>
-								    <caption>Monthly savings</caption>
-								    <tr>
-								      <th>Month</th>
-								      <th>Savings</th>
-								    </tr>
-								    <tr>
-								      <td>January</td>
-				   				    <td>$100</td>
-			  					   </tr>
-									</table> 
+                  &lt;table&gt;
+                    &lt;caption&gt;Monthly savings&lt;/caption&gt;
+                    &lt;tr&gt;
+                      &lt;th&gt;Month&lt;/th&gt;
+                      &lt;th&gt;Savings&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                      &lt;td&gt;January&lt;/td&gt;
+                       &lt;td&gt;$100&lt;/td&gt;
+                     &lt;/tr&gt;
+                  &lt;/table&gt; 
                   
             
           li
@@ -236,7 +236,7 @@ html(lang='de')
               p Definiert den Namen/Titel eines Werks (z.B. Ein Bild, ein Lied ...)
               codebox
                 pre(class="brush: xml").
-									<p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p> 
+                  &lt;p&gt;&lt;cite&gt;The Scream&lt;/cite&gt; by Edward Munch. Painted in 1893.&lt;/p&gt; 
             
           li
             code.white code
@@ -246,7 +246,7 @@ html(lang='de')
               p Enthält Computercode
               codebox
                 pre(class="brush: xml").
-                  <code>&lt;code&gt;</code>
+                  &lt;code&gt;&lt;code&gt;&lt;/code&gt;
                 
            
           li
@@ -254,65 +254,65 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;data&gt;
-              p The <data> tag links the given content with a machine-readable translation. This element provides both a machine-readable value for data processors, and a human-readable value for rendering in a browser.
+              p The &lt;data&gt; tag links the given content with a machine-readable translation. This element provides both a machine-readable value for data processors, and a human-readable value for rendering in a browser.
 
               codebox
                 pre(class="brush: xml").
-                  <ul>
-									  <li><data value="21053">Cherry Tomato</data></li>
-									  <li><data value="21054">Beef Tomato</data></li>
-									  <li><data value="21055">Snack Tomato</data></li>
-									</ul> 
+                  &lt;ul&gt;
+                    &lt;li&gt;&lt;data value="21053"&gt;Cherry Tomato&lt;/data&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;data value="21054"&gt;Beef Tomato&lt;/data&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;data value="21055"&gt;Snack Tomato&lt;/data&gt;&lt;/li&gt;
+                  &lt;/ul&gt; 
             
           li
             code.white datalist
             .description(data-open="false")
               h3
                 code.white &lt;datalist&gt;
-              p The <datalist> tag specifies a list of pre-defined options for an <input> element. The <datalist> tag is used to provide an "autocomplete" feature on <input> elements. Users will see a drop-down list of pre-defined options as they input data. Use the <input> element's list attribute to bind it together with a <datalist> element.
+              p The &lt;datalist&gt; tag specifies a list of pre-defined options for an &lt;input&gt; element. The &lt;datalist&gt; tag is used to provide an "autocomplete" feature on &lt;input&gt; elements. Users will see a drop-down list of pre-defined options as they input data. Use the &lt;input&gt; element's list attribute to bind it together with a &lt;datalist&gt; element.
 
               codebox
                 pre(class="brush: xml").
-                  <input list="browsers">
+                  &lt;input list="browsers"&gt;
 
-									<datalist id="browsers">
-									   <option value="Internet Explorer">
-									   <option value="Firefox">
-									   <option value="Chrome">
-									   <option value="Opera">
-									   <option value="Safari">
-									</datalist> 
-									            
+                  &lt;datalist id="browsers"&gt;
+                     &lt;option value="Internet Explorer"&gt;
+                     &lt;option value="Firefox"&gt;
+                     &lt;option value="Chrome"&gt;
+                     &lt;option value="Opera"&gt;
+                     &lt;option value="Safari"&gt;
+                  &lt;/datalist&gt; 
+                              
           li
             code.white dd
             .description(data-open="false")
               h3
                 code.white &lt;dd&gt;
-              p The <dd> tag is used to describe a term/name in a description list. The <dd> tag is used in conjunction with <dl> (defines a description list) and <dt> (defines terms/names). Inside a <dd> tag you can put paragraphs, line breaks, images, links, lists, etc.
+              p The &lt;dd&gt; tag is used to describe a term/name in a description list. The &lt;dd&gt; tag is used in conjunction with &lt;dl&gt; (defines a description list) and &lt;dt&gt; (defines terms/names). Inside a &lt;dd&gt; tag you can put paragraphs, line breaks, images, links, lists, etc.
 
               codebox
                 pre(class="brush: xml").
-                  <dl>
-									  <dt>Coffee</dt>
-									  <dd>Black hot drink</dd>
-									  <dt>Milk</dt>
-									  <dd>White cold drink</dd>
-									</dl> 
+                  &lt;dl&gt;
+                    &lt;dt&gt;Coffee&lt;/dt&gt;
+                    &lt;dd&gt;Black hot drink&lt;/dd&gt;
+                    &lt;dt&gt;Milk&lt;/dt&gt;
+                    &lt;dd&gt;White cold drink&lt;/dd&gt;
+                  &lt;/dl&gt; 
             
           li
             code.white details
             .description(data-open="false")
               h3
                 code.white &lt;details&gt;
-              p The <details> tag specifies additional details that the user can view or hide on demand. The <details> tag can be used to create an interactive widget that the user can open and close. Any sort of content can be put inside the <details> tag. The content of a <details> element should not be visible unless the open attribute is set.
+              p The &lt;details&gt; tag specifies additional details that the user can view or hide on demand. The &lt;details&gt; tag can be used to create an interactive widget that the user can open and close. Any sort of content can be put inside the &lt;details&gt; tag. The content of a &lt;details&gt; element should not be visible unless the open attribute is set.
 
               codebox
                 pre(class="brush: xml").
-									<details>
-									  <summary>Copyright 1999-2014.</summary>
-									  <p> - by Refsnes Data. All Rights Reserved.</p>
-									  <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
-									</details> 
+                  &lt;details&gt;
+                    &lt;summary&gt;Copyright 1999-2014.&lt;/summary&gt;
+                    &lt;p&gt; - by Refsnes Data. All Rights Reserved.&lt;/p&gt;
+                    &lt;p&gt;All content and graphics on this web site are the property of Refsnes&lt;/p&gt;
+                  &lt;/details&gt; 
                   
             
           li
@@ -320,55 +320,55 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;dfn&gt;
-              p The <dfn> tag represents the defining instance of a term in HTML. The defining instance is often the first use of a term in a document. The nearest parent of the <dfn> tag must also contain the definition/explanation for the term inside <dfn>.
+              p The &lt;dfn&gt; tag represents the defining instance of a term in HTML. The defining instance is often the first use of a term in a document. The nearest parent of the &lt;dfn&gt; tag must also contain the definition/explanation for the term inside &lt;dfn&gt;.
 
               codebox
                 pre(class="brush: xml").
-                  <p><dfn>HTML</dfn> is the standard markup language for creating web pages.</p>
+                  &lt;p&gt;&lt;dfn&gt;HTML&lt;/dfn&gt; is the standard markup language for creating web pages.&lt;/p&gt;
             
           li
             code.white dialog
             .description(data-open="false")
               h3
                 code.white &lt;dialog&gt;
-              p The <dialog> tag defines a dialog box or window. The <dialog> element makes it easy to create popup dialogs and modals on a web page.
+              p The &lt;dialog&gt; tag defines a dialog box or window. The &lt;dialog&gt; element makes it easy to create popup dialogs and modals on a web page.
 
               codebox
                 pre(class="brush: xml").
-                  <th>January <dialog open>This is an open dialog window</dialog></th>
+                  &lt;th&gt;January &lt;dialog open&gt;This is an open dialog window&lt;/dialog&gt;&lt;/th&gt;
             
           li
             code.white dt
             .description(data-open="false")
               h3
                 code.white &lt;dt&gt;
-              p The <dt> tag defines a term/name in a description list. The <dt> tag is used in conjunction with <dl> (defines a description list) and <dd> (describes each term/name).
+              p The &lt;dt&gt; tag defines a term/name in a description list. The &lt;dt&gt; tag is used in conjunction with &lt;dl&gt; (defines a description list) and &lt;dd&gt; (describes each term/name).
 
               codebox
                 pre(class="brush: xml").
-									<dl>
-								    <dt>Coffee</dt>
-								    <dd>Black hot drink</dd>
-								    <dt>Milk</dt>
-								    <dd>White cold drink</dd>
-									</dl>   
+                  &lt;dl&gt;
+                    &lt;dt&gt;Coffee&lt;/dt&gt;
+                    &lt;dd&gt;Black hot drink&lt;/dd&gt;
+                    &lt;dt&gt;Milk&lt;/dt&gt;
+                    &lt;dd&gt;White cold drink&lt;/dd&gt;
+                  &lt;/dl&gt;   
             
           li
             code.white dl
             .description(data-open="false")
               h3
                 code.white &lt;dl&gt;
-              p The <dl> tag defines a description list. The <dl> tag is used in conjunction with <dt> (defines terms/names) and <dd> (describes each term/name).
+              p The &lt;dl&gt; tag defines a description list. The &lt;dl&gt; tag is used in conjunction with &lt;dt&gt; (defines terms/names) and &lt;dd&gt; (describes each term/name).
 
               codebox
                 pre(class="brush: xml").
-                  <dl>
-								    <dt>Coffee</dt>
-								    <dd>Black hot drink</dd>
-								    <dt>Milk</dt>
-								    <dd>White cold drink</dd>
-									</dl> 
-								            
+                  &lt;dl&gt;
+                    &lt;dt&gt;Coffee&lt;/dt&gt;
+                    &lt;dd&gt;Black hot drink&lt;/dd&gt;
+                    &lt;dt&gt;Milk&lt;/dt&gt;
+                    &lt;dd&gt;White cold drink&lt;/dd&gt;
+                  &lt;/dl&gt; 
+                            
           li
             code.white embed
             .description(data-open="false")
@@ -377,7 +377,7 @@ html(lang='de')
               p Definiert einen Container für eine externe Anwendung oder interaktiven Inhalt.
               codebox
                 pre(class="brush: xml").
-                  <embed src="helloworld.swf"> 
+                  &lt;embed src="helloworld.swf"&gt; 
             
           li
             code.white fieldset
@@ -387,14 +387,14 @@ html(lang='de')
               p Wird benutzt um zueinander gehörende Elemente in einem Formular zu gruppieren
               codebox
                 pre(class="brush: xml").
-									<form>
-								    <fieldset>
-								      <legend>Personalia:</legend>
-								      Name: <input type="text"><br>
-								      Email: <input type="text"><br>
-								      Date of birth: <input type="text">
-								    </fieldset>
-									</form> 
+                  &lt;form&gt;
+                    &lt;fieldset&gt;
+                      &lt;legend&gt;Personalia:&lt;/legend&gt;
+                      Name: &lt;input type="text"&gt;&lt;br&gt;
+                      Email: &lt;input type="text"&gt;&lt;br&gt;
+                      Date of birth: &lt;input type="text"&gt;
+                    &lt;/fieldset&gt;
+                  &lt;/form&gt; 
                   
             
           li
@@ -402,14 +402,14 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;figcaption&gt;
-              p The <figcaption> tag defines a caption for a <figure> element. The <figcaption> element can be placed as the first or last child of the <figure> element.
+              p The &lt;figcaption&gt; tag defines a caption for a &lt;figure&gt; element. The &lt;figcaption&gt; element can be placed as the first or last child of the &lt;figure&gt; element.
 
               codebox
                 pre(class="brush: xml").
-									<figure>
-								    <img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
-								    <figcaption>Fig1. - A view of the pulpit rock in Norway.</figcaption>
-									</figure> 
+                  &lt;figure&gt;
+                    &lt;img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228"&gt;
+                    &lt;figcaption&gt;Fig1. - A view of the pulpit rock in Norway.&lt;/figcaption&gt;
+                  &lt;/figure&gt; 
                   
             
           li
@@ -417,12 +417,12 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;figure&gt;
-              p Das <figure> -Tag legt in sich geschlossene Inhalte wie Illustrationen, Diagramme, Fotos, Codelisten usw. fest. Während der Inhalt des <figure> -Elements mit dem Hauptfluss zusammenhängt, ist seine Position unabhängig vom Hauptfluss, und wenn es entfernt wird, sollte dies den Fluss des Dokuments nicht beeinflussen.
+              p Das &lt;figure&gt; -Tag legt in sich geschlossene Inhalte wie Illustrationen, Diagramme, Fotos, Codelisten usw. fest. Während der Inhalt des &lt;figure&gt; -Elements mit dem Hauptfluss zusammenhängt, ist seine Position unabhängig vom Hauptfluss, und wenn es entfernt wird, sollte dies den Fluss des Dokuments nicht beeinflussen.
               codebox
                 pre(class="brush: xml").
-                  <figure>
-										<img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
-									</figure> 
+                  &lt;figure&gt;
+                    &lt;img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228"&gt;
+                  &lt;/figure&gt; 
             
           li
             code.white footer
@@ -432,11 +432,11 @@ html(lang='de')
               p Definiert eine Fußzeile für eine Dokument oder einen Abschnitt und enthält weiterführende Informationen
               codebox
                 pre(class="brush: xml").
-									<footer>
-									  <p>Posted by: Hege Refsnes</p>
-									  <p>Contact information: <a href="mailto:someone@example.com">
-											someone@example.com</a>.</p>
-									</footer> 
+                  &lt;footer&gt;
+                    &lt;p&gt;Posted by: Hege Refsnes&lt;/p&gt;
+                    &lt;p&gt;Contact information: &lt;a href="mailto:someone@example.com"&gt;
+                      someone@example.com&lt;/a&gt;.&lt;/p&gt;
+                  &lt;/footer&gt; 
                   
             
           li
@@ -447,14 +447,14 @@ html(lang='de')
               p Das header-Element ist ein Container für einleitenden Inhalt oder Navigationslinks
               codebox
                 pre(class="brush: xml").
-									<article>
-								    <header>
-								      <h1>Most important heading here</h1>
-								      <h3>Less important heading here</h3>
-								      <p>Some additional information here</p>
-								    </header>
-								    <p>Lorem Ipsum dolor set amet....</p>
-									</article> 
+                  &lt;article&gt;
+                    &lt;header&gt;
+                      &lt;h1&gt;Most important heading here&lt;/h1&gt;
+                      &lt;h3&gt;Less important heading here&lt;/h3&gt;
+                      &lt;p&gt;Some additional information here&lt;/p&gt;
+                    &lt;/header&gt;
+                    &lt;p&gt;Lorem Ipsum dolor set amet....&lt;/p&gt;
+                  &lt;/article&gt; 
                   
             
           li
@@ -465,13 +465,13 @@ html(lang='de')
               p Definiert einen Themenwechsel in einer Seite.
               codebox
                 pre(class="brush: xml").
-									<h1>HTML</h1>
-										<p>HTML is a language for describing web pages.....</p>
+                  &lt;h1&gt;HTML&lt;/h1&gt;
+                    &lt;p&gt;HTML is a language for describing web pages.....&lt;/p&gt;
 
-										<hr>
+                    &lt;hr&gt;
 
-										<h1>CSS</h1>
-									<p>CSS defines how to display HTML elements.....</p> 
+                    &lt;h1&gt;CSS&lt;/h1&gt;
+                  &lt;p&gt;CSS defines how to display HTML elements.....&lt;/p&gt; 
                   
             
           li
@@ -482,7 +482,7 @@ html(lang='de')
               p Ein Inline-Frame. Hier wird ein anderes Dokument eingebunden.
               codebox
                 pre(class="brush: xml").
-                  <iframe src="https://www.w3schools.com"></iframe>
+                  &lt;iframe src="https://www.w3schools.com"&gt;&lt;/iframe&gt;
             
           li
             code.white kbd
@@ -492,7 +492,7 @@ html(lang='de')
               p Tastatureingabe
               codebox
                 pre(class="brush: xml").
-								  <kbd>Leertaste</kbd> 
+                  &lt;kbd&gt;Leertaste&lt;/kbd&gt; 
                   
             
           li
@@ -513,11 +513,11 @@ html(lang='de')
               p Ein Schlüsselpaargenerator für Formulare
               codebox
                 pre(class="brush: xml").
-									<form action="/action_page.php" method="get">
-								    Username: <input type="text" name="usr_name">
-								    Encryption: <keygen name="security">
-								    <input type="submit">
-									</form>
+                  &lt;form action="/action_page.php" method="get"&gt;
+                    Username: &lt;input type="text" name="usr_name"&gt;
+                    Encryption: &lt;keygen name="security"&gt;
+                    &lt;input type="submit"&gt;
+                  &lt;/form&gt;
                   
             
           li
