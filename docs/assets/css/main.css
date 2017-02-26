@@ -2607,7 +2607,7 @@ body.sleeppage .exit:hover::after, body.sleeppage .exit:hover::before {
   padding: 0 1rem;
 }
 
-.slide_div_1 .demodiv {
+.slide_div_1 .demodiv, .slide_div_1 .cssslides .pclasshover, .cssslides .slide_div_1 .pclasshover, .slide_div_1 .cssslides .pclassfocus, .cssslides .slide_div_1 .pclassfocus, .slide_div_1 .cssslides .pelementsdemo, .cssslides .slide_div_1 .pelementsdemo {
   height: 160px;
   height: 10rem;
   width: 160px;
@@ -2733,7 +2733,7 @@ body.sleeppage .exit:hover::after, body.sleeppage .exit:hover::before {
   margin: 0;
 }
 
-.cssslides .bg_blue {
+.cssslides .bg_blue, .cssslides .pclassfocus {
   background: #2D5593;
 }
 
@@ -2757,7 +2757,7 @@ body.sleeppage .exit:hover::after, body.sleeppage .exit:hover::before {
   float: right;
 }
 
-.cssslides .demodiv {
+.cssslides .demodiv, .cssslides .pclasshover, .cssslides .pclassfocus, .cssslides .pelementsdemo {
   height: 128px;
   height: 8rem;
   width: 80%;
@@ -2765,7 +2765,7 @@ body.sleeppage .exit:hover::after, body.sleeppage .exit:hover::before {
   margin: 1rem auto;
 }
 
-.cssslides .demodiv p {
+.cssslides .demodiv p, .cssslides .pclasshover p, .cssslides .pclassfocus p, .cssslides .pelementsdemo p {
   margin: 0;
   text-align: center;
   font-size: 32px;
@@ -2864,4 +2864,97 @@ body.sleeppage .exit:hover::after, body.sleeppage .exit:hover::before {
 .cssslides .shadowdemo1 .calendar.calNoShadow .day h2 {
   box-shadow: none;
   text-shadow: none;
+}
+
+.cssslides .pclasshover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #fff;
+  padding: 40px 0;
+  padding: 2.5rem 0;
+  text-transform: uppercase;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+.cssslides .pclasshover:hover {
+  background: #2D5593;
+  color: #FFC800;
+}
+
+.cssslides .pclassfocus {
+  padding: 40px 25%;
+  padding: 2.5rem 25%;
+}
+
+.cssslides .pclassfocus input {
+  color: #578CA9;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #578CA9;
+  width: 100%;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  padding: 4.8px 8px;
+  padding: 0.3rem 0.5rem;
+}
+
+.cssslides .pclassfocus input:focus {
+  border: none;
+  border-bottom: 3px solid #FFC800;
+  background: #578CA9;
+  color: #FFC800;
+  box-shadow: none;
+}
+
+.cssslides .pelementsdemo::before {
+  content: 'before';
+  background: yellow;
+}
+
+.cssslides .pelementsdemo::after {
+  content: 'after';
+  background: yellow;
+}
+
+.cssslides .pelementsdemo p::-moz-selection {
+  color: #89adf8;
+  background: #484654;
+}
+
+.cssslides .pelementsdemo p::selection {
+  color: #89adf8;
+  background: #484654;
+}
+
+.cssslides .transMit, .cssslides .transOhne {
+  padding: 40px 0;
+  padding: 2.5rem 0;
+  background: #2D5593;
+  color: #95DEE2;
+  text-transform: uppercase;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+.cssslides .transMit:hover, .cssslides .transOhne:hover {
+  border-radius: 4rem;
+  background: #142642;
+  color: #FFC800;
+  padding: 8px 0;
+  padding: .5rem 0;
+}
+
+.cssslides .transMit:hover p, .cssslides .transOhne:hover p {
+  font-size: 64px;
+  font-size: 4rem;
+}
+
+.cssslides .transMit {
+  -webkit-transition: all 3s;
+  transition: all 3s;
+}
+
+.cssslides .transMit p {
+  -webkit-transition: all 3s;
+  transition: all 3s;
 }

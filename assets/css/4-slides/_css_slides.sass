@@ -80,3 +80,64 @@
           h2
             box-shadow: none
             text-shadow: none
+
+  .pclasshover
+    @extend .demodiv
+    transition: all 0.5s
+    color: #fff
+    padding: 2.5rem 0
+    text-transform: uppercase
+    font-family: 'Roboto Slab', sans-serif
+    &:hover
+      background: $c_theme_base
+      color: $c_theme_accent
+  .pclassfocus
+    @extend .demodiv
+    @extend .bg_blue
+    padding: 2.5rem 25%
+    input
+      color: $c_theme_bg_2
+      background: transparent
+      border: none
+      border-bottom: 3px solid $c_theme_bg_2
+      width: 100%
+      line-height: 1
+      padding: 0
+      margin: 0
+      padding: 0.3rem 0.5rem
+      &:focus
+        border: none
+        border-bottom: 3px solid $c_theme_accent
+        background: $c_theme_bg_2
+        color: $c_theme_accent
+        box-shadow: none
+
+  .pelementsdemo
+    @extend .demodiv
+    &::before
+      content: 'before'
+      background: yellow
+    &::after
+      content: 'after'
+      background: yellow
+    p::selection
+      color: #89adf8
+      background: #484654
+
+  .transMit, .transOhne
+    padding: 2.5rem 0
+    background: $c_theme_base
+    color: $c_theme_light
+    text-transform: uppercase
+    font-family: 'Roboto Slab', sans-serif
+    &:hover
+      border-radius: 4rem
+      background: $c_theme_dark
+      color: $c_theme_accent
+      padding: .5rem 0
+      p
+        font-size: 4rem
+  .transMit
+    transition: all 3s
+    p
+      transition: all 3s

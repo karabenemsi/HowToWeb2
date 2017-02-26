@@ -1,8 +1,8 @@
 -var pfad = "slides/"
 -var home = "../index.html"
--var next = '2_6_text.html'
--var previous = '2_4_vererbung.html'
--var title = "Farben"
+-var next = "../StepbyStepPrebuild"
+-var previous = '2_24_transitions.html'
+-var title = "Media Queries"
 -var sleep = "../sleep.html"
 doctype html
 html(lang='de')
@@ -11,10 +11,27 @@ html(lang='de')
     include ../master/header.jade
     main
       section#1.explanation.active
+        h2 Media Queries
+        .codebox
+          pre(class="brush: css").
+            @media not|only mediatype and (expressions) {
+                CSS-Code;
+            }
+          
+            @media screen and (min-width: 480px) {
+              p {
+                color: pink;
+              }
+            }
 
         .nextslide
       section#2.explanation
         .previouslide
+        h2 Hilfreich
+        .huge
+          a.huge(href="http://www.w3schools.com/cssref/default.asp") W3Schools CSS Reference
+        .huge(style="margin: 2em 0")
+          a.huge(href="https://css-tricks.com/") CSS-Tricks 
 
 
   include ../master/footer.jade

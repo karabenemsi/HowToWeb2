@@ -12,10 +12,22 @@ html(lang='de')
     main
       section#1.explanation.active
         h2 Display
+        .codebox
+          pre(class="brush: css").
+              display: block;
+              display: inline;
+              display: inline-block;
+              display: none;
+        .examplebox
+          p Hi, this is 
+            span(style="display:block;height:2em;background:    #2a69c6;") Steven
+          p Hi, this is 
+            span(style="display: inline; height: 2em;background:#2a69c6;") Steven
+          p Hi, this is 
+            span(style="display: inline-block; height: 2em;background:#2a69c6;") Steven
+          p Hi, this is 
+            span(style="display: none; height: 2em;background:#2a69c6;") Steven
 
-        .nextslide
-      section#2.explanation
-        .previouslide
 
 
   include ../master/footer.jade
