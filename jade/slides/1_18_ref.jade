@@ -496,38 +496,27 @@ html(lang='de')
                   
             
           li
-            code.white keygen
-            .description(data-open="false")
-              h3
-                code.white &lt;keygen&gt;
-              p
-              codebox
-                pre(class="brush: xml").
-                  
-            
-          li
             code.white label
             .description(data-open="false")
               h3
                 code.white &lt;label&gt;
-              p Ein Schlüsselpaargenerator für Formulare
+              p The <label> tag defines a label for an <input> element. The <label> element does not render as anything special for the user. However, it provides a usability improvement for mouse users, because if the user clicks on the text within the <label> element, it toggles the control. The for attribute of the <label> tag should be equal to the id attribute of the related element to bind them together.
+
               codebox
                 pre(class="brush: xml").
-                  &lt;form action="/action_page.php" method="get"&gt;
-                    Username: &lt;input type="text" name="usr_name"&gt;
-                    Encryption: &lt;keygen name="security"&gt;
-                    &lt;input type="submit"&gt;
-                  &lt;/form&gt;
-                  
-            
+									<label for="male">Male</label>
+									<input type="radio" name="gender" id="male" value="male">
+									
           li
             code.white legend
             .description(data-open="false")
               h3
                 code.white &lt;legend&gt;
-              p
+              p The <legend> tag defines a caption for the <fieldset> element.
               codebox
                 pre(class="brush: xml").
+									<fieldset>
+										<legend>Personalia:</legend>
                   
             
           li
@@ -535,9 +524,13 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;link&gt;
-              p
+              p The <link> tag defines a link between a document and an external resource. The <link> tag is used to link to external style sheets.
+
               codebox
                 pre(class="brush: xml").
+									<head>
+				 				    <link rel="stylesheet" type="text/css" href="theme.css">
+									</head> 
                   
             
           li
@@ -545,9 +538,20 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;main&gt;
-              p
+              p The <main> tag specifies the main content of a document. The content inside the <main> element should be unique to the document. It should not contain any content that is repeated across documents such as sidebars, navigation links, copyright information, site logos, and search forms. There must not be more than one <main> element in a document. The <main> element must NOT be a descendant of an <article>, <aside>, <footer>, <header>, or <nav> element.
+
               codebox
                 pre(class="brush: xml").
+									<main>
+									  <h1>Web Browsers</h1>
+									  <p>Google Chrome, Firefox, and Internet Explorer are the most used browsers today.</p>
+
+									  <article>
+									    <h1>Google Chrome</h1>
+									    <p>Google Chrome is a free, open-source web browser developed by Google,
+									    released in 2008.</p>
+									  </article>
+
                   
             
           li
@@ -555,9 +559,17 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;map&gt;
-              p
+              p The <map> tag is used to define a client-side image-map. An image-map is an image with clickable areas. The required name attribute of the <map> element is associated with the <img>'s usemap attribute and creates a relationship between the image and the map. The <map> element contains a number of <area> elements, that defines the clickable areas in the image map.
+
               codebox
                 pre(class="brush: xml").
+									<img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+
+									<map name="planetmap">
+									   <area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
+									   <area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
+									   <area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus">
+									</map>
                   
             
           li
@@ -565,19 +577,25 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;mark&gt;
-              p
+              p The <mark> tag defines marked text. Use the <mark> tag if you want to highlight parts of your text.
+							
               codebox
                 pre(class="brush: xml").
-                  
+                  <p>Do not forget to buy <mark>milk</mark> today.</p>
             
           li
             code.white menu
             .description(data-open="false")
               h3
                 code.white &lt;menu&gt;
-              p
+              p (Only Firefox) The <menu> tag defines a list/menu of commands. The <menu> tag is used for context menus, toolbars and for listing form controls and commands.
+
               codebox
                 pre(class="brush: xml").
+									<menu type="context" id="mymenu">
+										<menuitem label="Refresh" onclick="window.location.reload();" icon="ico_reload.png">
+										</menuitem>
+									</menu>
                   
             
           li
@@ -585,19 +603,30 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;menuitem&gt;
-              p
+              p (Only Firefox) The <menuitem> tag defines a command/menu item that the user can invoke from a popup menu.
               codebox
                 pre(class="brush: xml").
-                  
+  								<menu type="context" id="mymenu">
+										<menuitem label="Refresh" onclick="window.location.reload();" icon="ico_reload.png">
+										</menuitem>
+									</menu>               
             
           li
             code.white meta
             .description(data-open="false")
               h3
                 code.white &lt;meta&gt;
-              p
+              p Metadata is data (information) about data. The <meta> tag provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parsable. Meta elements are typically used to specify page description, keywords, author of the document, last modified, and other metadata. The metadata can be used by browsers (how to display content or reload page), search engines (keywords), or other web services.
+
               codebox
                 pre(class="brush: xml").
+									<head>
+									  <meta charset="UTF-8">
+									  <meta name="description" content="Free Web tutorials">
+									  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+									  <meta name="author" content="John Doe">
+									  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+									</head> 
                   
             
           li
@@ -605,29 +634,42 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;meter&gt;
-              p
+              p The <meter> tag defines a scalar measurement within a known range, or a fractional value. This is also known as a gauge. Examples: Disk usage, the relevance of a query result, etc.
+
               codebox
                 pre(class="brush: xml").
-                  
+                  <meter value="2" min="0" max="10">2 out of 10</meter><br>
+									<meter value="0.6">60%</meter>
             
           li
             code.white nav
             .description(data-open="false")
               h3
                 code.white &lt;nav&gt;
-              p
+              p The <nav> tag defines a set of navigation links. Notice that NOT all links of a document should be inside a <nav> element. The <nav> element is intended only for major block of navigation links. Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content.
+
               codebox
                 pre(class="brush: xml").
-                  
+                  <nav>
+									  <a href="/html/">HTML</a> |
+									  <a href="/css/">CSS</a> |
+									  <a href="/js/">JavaScript</a> |
+									  <a href="/jquery/">jQuery</a>
+									</nav>
             
           li
             code.white noscript
             .description(data-open="false")
               h3
                 code.white &lt;noscript&gt;
-              p
+              p The <noscript> tag defines an alternate content for users that have disabled scripts in their browser or have a browser that doesn't support script. The <noscript> element can be used in both <head> and <body>.
+
               codebox
                 pre(class="brush: xml").
+									<script>
+									 document.write("Hello World!")
+									</script>
+									<noscript>Your browser does not support JavaScript!</noscript> 
                   
             
           li
@@ -635,19 +677,27 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;object&gt;
-              p
+              p The <object> tag defines an embedded object within an HTML document. Use this element to embed multimedia (like audio, video, Java applets, ActiveX, PDF, and Flash) in your web pages. You can also use the <object> tag to embed another webpage into your HTML document.
+
               codebox
                 pre(class="brush: xml").
-                  
+									<object width="400" height="400" data="helloworld.swf"></object> 
             
           li
             code.white optgroup
             .description(data-open="false")
               h3
                 code.white &lt;optgroup&gt;
-              p
+              p The <optgroup> is used to group related options in a drop-down list. If you have a long list of options, groups of related options are easier to handle for a user.
+
               codebox
                 pre(class="brush: xml").
+									<select>
+									  <optgroup label="Swedish Cars">
+									    <option value="volvo">Volvo</option>
+									    <option value="saab">Saab</option>
+									  </optgroup>
+									</select>
                   
             
           li
@@ -655,9 +705,13 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;option&gt;
-              p
+              p The <option> tag defines an option in a select list.
               codebox
                 pre(class="brush: xml").
+                  <select>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                  </select>
                   
             
           li
@@ -665,9 +719,15 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;output&gt;
-              p
+              p The <output> tag represents the result of a calculation (like one performed by a script)
               codebox
                 pre(class="brush: xml").
+									<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+									  <input type="range" id="a" value="50">100
+									  +<input type="number" id="b" value="50">
+									  =<output name="x" for="a b"></output>
+									</form> 
+											
                   
             
           li
@@ -675,9 +735,14 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;param&gt;
-              p
+              p Wird benutzt um Parameter für Plugins bereitzustellen, die mit 
+								code &lt;object&gt;
+								|  eingebunden werden.
               codebox
                 pre(class="brush: xml").
+									<object data="horse.wav">
+										<param name="autoplay" value="true">
+									</object> 
                   
             
           li
@@ -685,69 +750,61 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;picture&gt;
-              p
+              p The &lt;picture&gt; tag gives web developers more flexibility in specifying image resources.
+							p The most common use of the &lt;picture&gt; element will be for art direction in responsive designs. Instead of having one image that is scaled up or down based on the viewport width, multiple images can be designed to more nicely fill the browser viewport.
+							p The &lt;picture&gt; element holds two different tags: one or more &lt;source&gt; tags and one &lt;img&gt; tag.
+							p The &lt;source&gt; element has the following attributes:
+							ul
+							  li srcset (required) - defines the URL of the image to show
+							  li media - accepts any valid media query that would normally be defined in a CSS
+							  li sizes - defines a single width descriptor, a single media query with width descriptor, or a comma-delimited list of media queries with a width descriptor
+							  li type - defines the MIME type
+							p The browser will use the attribute values to load the most appropriate image. 
+							The browser will use the first &lt;source&gt; element with a matching hint and ignore 
+							any following &lt;source&gt; tags.
+							p The &lt;img&gt; element is required as the last child tag of the &lt;picture&gt; declaration block. The &lt;img&gt; element is used to provide backward compatibility for browsers that do not support the &lt;picture&gt; element, or if none of the &lt;source&gt; tags matched.
+							p The &lt;picture&gt; element works similar to the &lt;video&gt; and &lt;audio&gt; elements. You set up different sources, and the first source that fits the preferences is the one being used.
+
               codebox
                 pre(class="brush: xml").
-                  
+                  <picture>
+									  <source media="(min-width: 650px)" srcset="img_pink_flowers.jpg">
+									  <source media="(min-width: 465px)" srcset="img_white_flower.jpg">
+									  <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+									</picture>
             
           li
             code.white progress
             .description(data-open="false")
               h3
                 code.white &lt;progress&gt;
-              p
+              p The <progress> tag represents the progress of a task. 
               codebox
                 pre(class="brush: xml").
-                  
+                  <progress value="22" max="100"></progress> 
             
           li
             code.white q
             .description(data-open="false")
               h3
                 code.white &lt;q&gt;
-              p
+              p The <q> tag defines a short quotation.
               codebox
                 pre(class="brush: xml").
-                  
-            
-          li
-            code.white rp
-            .description(data-open="false")
-              h3
-                code.white &lt;rp&gt;
-              p
-              codebox
-                pre(class="brush: xml").
-                  
-            
-          li
-            code.white rt
-            .description(data-open="false")
-              h3
-                code.white &lt;rt&gt;
-              p
-              codebox
-                pre(class="brush: xml").
-                  
-            
-          li
-            code.white ruby
-            .description(data-open="false")
-              h3
-                code.white &lt;ruby&gt;
-              p
-              codebox
-                pre(class="brush: xml").
-                  
-            
+                  <p>WWF's goal is to: 
+									<q>Build a future where people live in harmony with nature.</q>
+									 We hope they succeed.</p> 
+									 
           li
             code.white s
             .description(data-open="false")
               h3
                 code.white &lt;s&gt;
-              p
+              p The <s> tag specifies text that is no longer correct, accurate or relevant.
               codebox
                 pre(class="brush: xml").
+									<p><s>My car is blue.</s></p>
+									<p>My new car is silver.</p> 
                   
             
           li
@@ -755,10 +812,24 @@ html(lang='de')
             .description(data-open="false")
               h3
                 code.white &lt;samp&gt;
-              p
+              p It defines sample output from a computer program.
               codebox
                 pre(class="brush: xml").
-                  
+                  <samp>Sample output from a computer program</samp>
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
             
           li
             code.white script
@@ -942,7 +1013,12 @@ html(lang='de')
             
           li
             code.white wbr
-            
+            .description(data-open="false")
+              h3
+                code.white &lt;wbr&gt;
+              p
+              codebox
+                pre(class="brush: xml").            
 
             
            
