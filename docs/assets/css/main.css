@@ -1882,8 +1882,8 @@ kbd {
 .indexpage .half.open .content {
   display: block;
   height: 70%;
-  width: 40%;
-  margin: 0 auto 0 35%;
+  width: 70%;
+  margin: 0 auto 0 15%;
   -webkit-animation: index_listopen_content 0.5s forwards;
   animation: index_listopen_content 0.5s forwards;
 }
